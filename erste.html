@@ -8,24 +8,38 @@
     <title>Erste Calculator</title>
 </head>
 <body>
-    <h1>Erste Calculator</h1>
+    <h2>Erste Calculator</h2>
 
         <p>
-            <label for="">Teljes összeg</label>
+            <label class="label-style">Teljes összeg (Ft)</label>
         </p>
-        <input type="text" name="amount-input" class="form-control" value="1000000">
         <p>
-            <label for="">Tranzakció díja %</label>
+            <input type="text" name="amount-input" class="value-style" value="1000000">
         </p>
-        <input type="text" name="trx-fee" class="form-control" value="0.3"><br>
+        
         <p>
-            <label for="">Egyéb költségek</label>
+            <label class="label-style">Tranzakció díja (%)</label>
         </p>
-        <input type="text" name="additional-price" class="form-control" value="0"><br>
         <p>
-            <label for="">Tranzakciós illeték %</label>
+            <input type="text" name="trx-fee" class="value-style" value="0.3"><br>
         </p>
-        <input type="text" name="option-one" class="form-control" value="0.3"><br>
+        
+        <p>
+            <label class="label-style">Egyéb költségek (Ft)</label>
+        </p>
+        <p>
+            <input type="text" name="additional-price" class="value-style" value="0"><br>
+        </p>
+
+        <p>
+            <label class="label-style">Tranzakciós illeték (%)</label><br>
+            <label class="trx-color">Ha 0.3%: 2 millió forint felett, állítsd az értékét 0-ra</label><br>
+            <label class="trx-color">Ha 0.6%: 1 millió forint felett, állítsd az értékét 0-ra</label>
+        </p>
+        <p>
+            <input type="text" name="option-one" class="value-style" value="0.3"><br>
+
+        </p>
         <p>
             <button onclick="calcAmount()" type="button" class="btn btn-primary">Kiszámítás</button>
         </p>

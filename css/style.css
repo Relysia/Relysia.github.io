@@ -1,12 +1,10 @@
-h1
+h2
 {
     color: blue;
-}
-
-input 
-{
-    width: 100px;
-    height: 40px;
+    margin: auto;
+    width: 10%;
+    border: 3px solid blue;
+    padding: 10px;
     text-align: center;
 }
 
@@ -14,4 +12,33 @@ button
 {
     height: 40px;
     width: 110px;
+    font-size: 18px;
+    border-radius: 6px;
+    border-color: lightblue;
+    background-color: blue;
+    color: white;
+    margin: auto;
+}
+
+.trx-color
+{
+    color: green;
+    font-size: 14px;
+}
+
+p
+{
+    margin: auto;
+    width: 10%;
+    border: 3px double blue;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.value-style
+{
+    text-align: center;
+    font-weight: 700;
 }
