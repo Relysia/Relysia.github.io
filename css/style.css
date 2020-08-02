@@ -1,0 +1,17 @@
+h1
+{
+    color: blue;
+}
+
+input 
+{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+}
+
+button
+{
+    height: 40px;
+    width: 110px;
+}

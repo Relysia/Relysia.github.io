@@ -4,22 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/46c5b0980a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Erste Calculator</title>
 </head>
 <body>
     <h1>Erste Calculator</h1>
 
-        <label for="">Mennyiség</label>
+        <p>
+            <label for="">Teljes összeg</label>
+        </p>
         <input type="text" name="amount-input" class="form-control" value="1000000">
-        <label for="">Tranzakció díja %</label>
-        <input type="text" name="trx-fee" class="form-control" value="0.3">
-        <label for="">Egyéb költségek</label>
-        <input type="text" name="additional-price" class="form-control" value="0">
-        <label for="">Tranzakciós illeték %</label>
-        <input type="text" name="option-one" class="form-control" value="0.3">
-
-        <button onclick="calcAmount()" type="button" class="btn btn-primary">Megrendelés</button>
-        Tranzakciós díj: <span class="show-amount">0</span>Ft
+        <p>
+            <label for="">Tranzakció díja %</label>
+        </p>
+        <input type="text" name="trx-fee" class="form-control" value="0.3"><br>
+        <p>
+            <label for="">Egyéb költségek</label>
+        </p>
+        <input type="text" name="additional-price" class="form-control" value="0"><br>
+        <p>
+            <label for="">Tranzakciós illeték %</label>
+        </p>
+        <input type="text" name="option-one" class="form-control" value="0.3"><br>
+        <p>
+            <button onclick="calcAmount()" type="button" class="btn btn-primary">Kiszámítás</button>
+        </p>
+        <p>
+            Tranzakciós díj: <span class="show-amount">0</span>Ft
+        </p>
 
     <script src="js/erste.js"></script>
 </body>
