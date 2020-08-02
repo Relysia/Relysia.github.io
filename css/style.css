@@ -4,7 +4,7 @@ h2
     width: 100%;
     border-bottom: 8px double blue;
     text-align: center;
-    margin-right: 50px;
+    margin: 10px;
 }
 
 button
@@ -12,7 +12,7 @@ button
     height: 40px;
     width: 100px;
     font-size: 18px;
-    border-radius: 6px;
+    border-radius: 5px;
     border-color: lightblue;
     background-color: blue;
     color: white;
@@ -21,8 +21,8 @@ button
 
 .trx-color
 {
-    color: green;
-    font-size: 12px;
+    color: red;
+    font-size: 14px;
 }
 
 p
@@ -32,7 +32,8 @@ p
     font-size: 18px;
     font-weight: 800;
     text-align: center;
-    padding: 20px;
+    padding: 9px;
+    margin: 5px;
 }
 
 .value-style
