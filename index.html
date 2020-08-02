@@ -1,55 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relysia Filmworks</title>
+    <script src="https://kit.fontawesome.com/46c5b0980a.js" crossorigin="anonymous"></script>
+    <title>Erste Calculator</title>
 </head>
-
 <body>
-    <ul>
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li>
-            <a href="/pages/products.html">Products</a>
-        </li>
-        <li>
-            <a href="/pages/orders.html">Orders</a>
-        </li>
-        <li>
-            <a href="/about.html">About</a>
-        </li>
-    </ul>
-    <h1>Relysia Filmworks</h1>
-    <ul>
-        <li>
-            Wedding
-            <ul>
-                <li>Outdoor</li>
-                <li>Indoor</li>
-            </ul>
-        </li>
-        <li>Landscape</li>
-        <li>Street</li>
-    </ul>
+    <h1>Erste Calculator</h1>
 
-    <h2>Step of order</h2>
-    <ol>
-        <li>Choose a style</li>
-        <li>Order it</li>
-        <li>Make an appointment</li>
-        <li>Enjoy the finished product</li>
-    </ol>
+        <label for="">Mennyiség</label>
+        <input type="text" name="amount-input" class="form-control" value="1000000">
+        <label for="">Tranzakció díja %</label>
+        <input type="text" name="trx-fee" class="form-control" value="0.3">
+        <label for="">Egyéb költségek</label>
+        <input type="text" name="additional-price" class="form-control" value="0">
+        <label for="">Tranzakciós illeték %</label>
+        <input type="text" name="option-one" class="form-control" value="0.3">
 
-    <a href="https://en.wikipedia.org/wiki/Filmmaking">
-        Filmmaking
-    </a>
-    <a href="pages/orders.html">orders</a>
-    <a target="blank" href="https://en.wikipedia.org/wiki/Filmmaking">
-        <img width="200" src="img/Filmmaking.jpg" alt="Filmmaking">
-    </a>
+        <button onclick="calcAmount()" type="button" class="btn btn-primary">Megrendelés</button>
+        Tranzakciós díj: <span class="show-amount">0</span>Ft
+
+    <script src="js/erste.js"></script>
 </body>
-
 </html>
