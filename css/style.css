@@ -94,7 +94,6 @@ body
     max-width: 390px;
     margin: auto;
     padding-top: 15px;
-    background-size: cover;
     background-position: center;
     background-image: url("/img/cloud.jpg");
     background-color: #cccccc;
