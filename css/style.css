@@ -1,7 +1,7 @@
 h2
 {
     color: blue;
-    width: 100%;
+    width: auto;
     border-bottom: 8px double blue;
     text-align: center;
     margin: 10px;
