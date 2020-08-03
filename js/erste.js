@@ -28,5 +28,5 @@ function showSumPrice(amountNumber, trxFeeValue, percent, optionOneValue, additi
         {
             trxAmount = 6000;
         }
-        showAmount.innerHTML = amount;
+        showAmount.innerHTML = amount + trxAmount;
 }
