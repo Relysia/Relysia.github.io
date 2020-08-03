@@ -22,6 +22,11 @@ function showSumPrice(amountNumber, trxFeeValue, percent, optionOneValue, additi
 {
         let showAmount = document.querySelector("span.show-amount");
 
-        let amount = (amountNumber / percent * trxFeeValue) + additionalPriceValue + (amountNumber / percent * optionOneValue);
+        let amount = (amountNumber / percent * trxFeeValue) + additionalPriceValue;
+        let trxAmount =  (amountNumber / percent * optionOneValue);
+        if (trxAmount >= 6000) 
+        {
+            trxAmount = 6000;
+        }
         showAmount.innerHTML = amount;
 }
