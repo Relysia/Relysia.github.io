@@ -37,8 +37,10 @@ body {
 
 /* NAVIGATION START */
 .navigation {
+}
 
-list-style-type: square;
+.navicon {
+    list-style-type: square;
 }
 /* NAVIGATION END */
 
