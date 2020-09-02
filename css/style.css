@@ -50,7 +50,7 @@ body {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.2px;
     background-image: url("/images/about.jpg");
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     width: 100%;
