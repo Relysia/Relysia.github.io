@@ -37,7 +37,8 @@ body {
 
 /* NAVIGATION START */
 .navigation {
-    display: none;
+
+list-style-type: square;
 }
 /* NAVIGATION END */
 
