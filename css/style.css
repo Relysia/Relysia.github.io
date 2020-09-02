@@ -37,7 +37,7 @@ body {
 
 /* NAVIGATION START */
 .navigation {
- 
+    display: none;
 }
 
 .navicon {
