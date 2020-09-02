@@ -41,7 +41,8 @@ body {
 }
 
 .navicon {
-    list-style-type: square;
+    list-style-image: url("https://b7.pngbarn.com/png/505/681/alfa-romeo-romeo-car-alfa-romeo-brera-and-spider-alfa-romeo-spider-alfa-romeo-png-clip-art.png");
+    list-style-position: inside;
 }
 /* NAVIGATION END */
 
