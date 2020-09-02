@@ -40,6 +40,11 @@ body {
 .navigation {
     display: none;
 }
+
+.navicon {
+    list-style-image: url("https://i.pinimg.com/originals/b5/28/ca/b528caf79d37050cf377aec16143805c.png");
+    list-style-position: inside;
+}
 /* NAVIGATION END */
 
 
@@ -51,11 +56,11 @@ body {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.2px;
     background-image: url("/images/about.jpg");
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     color: #ffffff;
 }
 
@@ -92,3 +97,9 @@ body {
     padding-right: 4%;
 }
 /* ABOUT ME END */
+
+/* MY SCHEDULE START */
+caption{
+    caption-side: top;
+}
+/* MY SCHEDULE END */
