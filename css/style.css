@@ -8,6 +8,43 @@ body {
 }
 /* GLOBAL START */
 
+/* RESPONSIVE WEBSITE START */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .header, .about, .schedule {
+        font-size: 0.6em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .header, .about, .schedule {
+        font-size: 0.7em;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .header, .about, .schedule {
+        font-size: 0.8em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .header, .about, .schedule {
+        font-size: 0.9em;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .header, .about, .schedule {
+        font-size: 1em;
+    }
+}
+/* RESPONSIVE WEBSITE END */
+
 
 /* HEADER START */
 .header {
@@ -60,7 +97,7 @@ body {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     color: #ffffff;
 }
 
@@ -83,6 +120,8 @@ body {
     text-align: justify;
     font-size: 1.2em;
     padding: 3% 4%;
+    max-height: 300px;
+    overflow: auto;
 }
 
 .aboutstrong {
@@ -99,7 +138,40 @@ body {
 /* ABOUT ME END */
 
 /* MY SCHEDULE START */
+.schedule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/learning.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+.schtable {
+    font-size: 1.8em;
+    text-align: center;
+    color: white;
+    font-variant: small-caps;
+}
+
+table {
+    background-image: linear-gradient(to bottom, rgba(9, 255, 255, 0.479), rgba(0, 0, 0, 0.6));
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.3em;
+}
+
+td {
+    border: 1px solid white;
+}
+
 caption{
     caption-side: top;
+    font-size: 1.3em;
 }
 /* MY SCHEDULE END */
