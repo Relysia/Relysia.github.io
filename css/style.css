@@ -11,8 +11,11 @@ body {
 /* RESPONSIVE WEBSITE START */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .header, .about, .schedule {
+    .header, .about {
         font-size: 0.6em;
+    }
+    .schedule {
+        font-size: 0.5em;
     }
 }
 
