@@ -61,6 +61,7 @@ body {
 .headertext{
     font-variant: small-caps;
     font-family: 'Expletus Sans', cursive;
+    text-align: center;
     letter-spacing: 2px;
     color: #ffffff;
     font-size: 3em;
