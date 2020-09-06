@@ -177,5 +177,7 @@ td {
 caption{
     caption-side: top;
     font-size: 1.3em;
+    font-weight: 300;
+    margin-top: -30px;
 }
 /* MY SCHEDULE END */
