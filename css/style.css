@@ -4,7 +4,6 @@
 
 body {
     margin: auto;
-    cursor: crosshair;
 }
 /* GLOBAL START */
 
@@ -120,7 +119,7 @@ body {
 }
 
 .abouttext {
-    background-color: rgb(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, .6);
     text-transform: uppercase;
     text-indent: 30px;
     text-align: justify;
@@ -128,10 +127,14 @@ body {
     padding: 3% 4%;
     max-height: 300px;
     overflow: auto;
-    border: solid 10px rgba(0, 0, 0, 0.4);
+    border: solid 10px rgba(0, 0, 0, .4);
     background-clip: padding-box;
-    opacity: 1;
-    transition: opacity 3s;
+    transition: ease-in-out .6s;
+}
+
+.abouttext:hover {
+    background-color: rgb(32, 204, 216);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, .5);
 }
 
 .aboutstrong {
