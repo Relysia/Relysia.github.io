@@ -129,7 +129,7 @@ body {
     overflow: auto;
     border: solid 10px rgba(0, 0, 0, .4);
     background-clip: padding-box;
-    transition: ease-in-out .6s;
+    transition: ease-in-out .5s;
 }
 
 .abouttext:hover {
