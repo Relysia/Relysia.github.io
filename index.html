@@ -127,18 +127,20 @@
 
     <!-- My Skills section start -->
     <div class="container" id="skills">
-        <h1 id="my-skills">My Skills</h1>
-        <ul id="skillBar">
-            <li>HTML <br/>
-                <progress min="0" max="100" value="80"></progress>
-            </li>
-            <li>JavaScript <br/>
-                <progress min="0" max="100" value="50"></progress>
-            </li>
-            <li>Python <br/>
-                <progress min="0" max="100" value="30"></progress>
-            </li>
-        </ul>
+        <div class="skills-col">
+            <h1 id="my-skills">My Skills</h1>
+            <ul id="skillBar">
+                <li>HTML <br />
+                    <progress min="0" max="100" value="90"></progress>
+                </li>
+                <li>CSS <br />
+                    <progress min="0" max="100" value="80"></progress>
+                </li>
+                <li>JavaScript <br />
+                    <progress min="0" max="100" value="20"></progress>
+                </li>
+            </ul>
+        </div>
     </div>
     <!-- My Skills section end -->
 
@@ -148,21 +150,24 @@
         <video id="video-bg" preload="auto" autoplay loop muted>
             <source src="/videos/skill.mp4" type="video/mp4">
         </video>
-        <p id="my-motivation">“Intelligence is the ability to avoid doing work, yet getting the work done.”<span id="linus">- Linus Torvalds</span></p>
+        <p id="my-motivation">“Intelligence is the ability to avoid doing work, yet getting the work done.”<span
+                id="linus">- Linus Torvalds</span></p>
     </section>
     <!-- Media section end -->
 
     <!-- Form section start -->
     <div class="container" id="contact">
-        <h1><span>Contact Me</span></h1>
-        <form class="contact-form">
-            <input name="name" placeholder="Name" type="text" required /><br />
-            <input name="email" placeholder="Email" type="email" required /><br />
-            <textarea name="message" placeholder="Message goes here" required></textarea><br>
-            <input type="date"><br>
-            <input type="color"><br>
-            <input type="submit" value="SEND" class="submit" />
-        </form>
+        <div class="contact-col">
+            <h1 id="contact-title">Contact Me</h1>
+            <form class="contact-form">
+                <input name="name" placeholder="Name" type="text" required /><br />
+                <input name="email" placeholder="Email" type="email" required /><br />
+                <textarea name="message" placeholder="Message goes here" required></textarea><br>
+                <input type="date"><br>
+                <input type="color"><br>
+                <input type="submit" value="SEND" class="submit" />
+            </form>
+        </div>
     </div>
     <!-- Form section end -->
 

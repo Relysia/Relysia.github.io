@@ -262,15 +262,40 @@ caption{
     background-attachment: scroll;
 }
 
+.skills-col {
+    width: 80%;
+}
+
 #my-skills {
+    text-align: center;
     color: white;
+    text-shadow: 2px 2px 2px black;
+    line-height: 1rem;
+}
+
+progress {
+    border: 3px solid black;
+    width: 70%;
+    height: 50px;
+    background: rgb(7, 154, 173);
+}
+
+progress::-webkit-progress-value {
+    background: rgb(7, 154, 173);
 }
 
 #skillBar {
+    list-style-type: none;
+    text-align: center;
+    padding: 15px;
+    width: 40rem;
     background-color: rgba(0, 0, 0, .5);
     border-radius: 20px;
     color: white;
     font-size: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 4rem;
 }
 /* SKILLS END */
 
@@ -314,10 +339,52 @@ caption{
 /* CONTACT ME START */
 #contact {
     background-image: url(/images/contact.jpg);
-    display: block;
-    margin: 0;
+}
+
+.contact-col {
+    width: 80%;
+}
+
+#contact-title {
+    text-align: center;
+    line-height: 6rem;
 }
 
 .contact-form {
+    color: var(--main-font-color);
+    text-align: center;
+}
+
+input {
+    font-size: 1.8rem;
+    text-align: center;
+    width: 60rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid rgb(126, 200, 235);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 60rem;
+    font-size: 1.7rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    height: 10rem;
+    display: inline-block;
+    border: 3px solid rgb(126, 200, 235);
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: #0ea6cc;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 /* CONTACT ME END */
