@@ -21,8 +21,6 @@ p {
 }
 /* ROOT SETUP END */
 
-
-
 /* RESPONSIVE WEBSITE START */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -61,7 +59,6 @@ p {
     }
 }
 /* RESPONSIVE WEBSITE END */
-
 
 /* HEADER START */
 .header {
@@ -109,7 +106,6 @@ p {
 }
 /* HEADER END */
 
-
 /* NAVIGATION START */
 .navigation {
     display: none;
@@ -120,7 +116,6 @@ p {
     list-style-position: inside;
 }
 /* NAVIGATION END */
-
 
 /* ABOUT ME START */
 .about {
@@ -234,12 +229,13 @@ p {
 }
 
 #tableStyle {
-    font-size: 3rem;
+    font-size: 2.2rem;
     background-image: linear-gradient(to bottom, rgba(9, 255, 255, 0.479), rgba(0, 0, 0, 0.6));
     border: 1px solid white;
     border-radius:   5px;
     color: white;
 }
+
 
 td {
     border: 1px solid white;
