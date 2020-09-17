@@ -30,6 +30,10 @@ p {
     .caption {
         margin: 20px;
     }
+    .overlay {
+        background-color: rgba(0, 0, 0, 1);
+        z-index: 1;
+    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -204,7 +208,7 @@ p {
     padding: 20px;
     border-radius: 50%;
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
     transition: .3s;
 }
 
@@ -213,6 +217,7 @@ p {
 }
 
 .schtable {
+    z-index: 1;
     text-align: center;
     line-height: 4rem;
     letter-spacing: 0.4rem;
@@ -224,6 +229,7 @@ p {
 }
 
 .schtable:hover {
+    z-index: 2;
     transform: rotateZ(0deg) rotateY(0deg) scale(1.0) skewX(0deg);
     filter: none;
 }
@@ -298,7 +304,7 @@ div, section {
 
 #myMotivation {
     font-size: 2.5rem;
-    padding: 6rem;
+    padding: 4rem;
     text-transform: uppercase;
     font-weight: bolder;
     text-align: center;
