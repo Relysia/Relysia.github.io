@@ -1,20 +1,33 @@
-/* GLOBAL START */
+/* IMPORTED FILES START */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@600&display=swap');
+/* IMPORTED FILES END */
+
+/* ROOT SETUP START */
+html {
+    font-size: 10px;
+}
 
 body {
     margin: auto;
 }
-/* GLOBAL START */
+
+h1 {
+    font-size: 8rem;
+}
+
+p {
+    font-size: 2rem;
+}
+/* ROOT SETUP END */
+
+
 
 /* RESPONSIVE WEBSITE START */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .header, .about {
-        font-size: 0.6em;
-    }
-    .schedule {
-        font-size: 0.4em;
+    html {
+        font-size: 6px;
     }
     .caption {
         margin: 20px;
@@ -22,29 +35,29 @@ body {
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .header, .about, .schedule {
-        font-size: 0.7em;
+    html {
+        font-size: 7px;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .header, .about, .schedule {
-        font-size: 0.8em;
+    html {
+        font-size: 8px;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .header, .about, .schedule {
-        font-size: 0.9em;
+    html {
+        font-size: 9px;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .header, .about, .schedule {
-        font-size: 1em;
+    html {
+        font-size: 10px;
     }
 }
 /* RESPONSIVE WEBSITE END */
@@ -52,7 +65,7 @@ body {
 
 /* HEADER START */
 .header {
-    background-image: url("/images/headerbg.jpg");
+    background-image: url("/images/headerfinal.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -60,6 +73,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    animation-name: bganimate;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes bganimate {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .headertext{
@@ -68,8 +90,18 @@ body {
     text-align: center;
     letter-spacing: 2px;
     color: #ffffff;
-    font-size: 3em;
     text-shadow: 3px 3px 5px rgb(44, 44, 44);
+    animation-name: zoomheadertext;
+    animation-duration: 2s;
+    animation-delay: 0.1s;
+}
+
+@keyframes zoomheadertext {
+    0% {transform: scale(.5);}
+    50% {transform: scale(1.5);}
+    70% {transform: scale(1.5);}
+    80% {transform: scale(.8);}
+    100% {transform: scale(1);}
 }
 
 .designsub {
@@ -114,7 +146,6 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin: auto;
-    font-size: 5em;
     font-weight: 900;
 }
 
@@ -123,7 +154,6 @@ body {
     text-transform: uppercase;
     text-indent: 30px;
     text-align: justify;
-    font-size: 1.2em;
     padding: 3% 4%;
     max-height: 300px;
     overflow: auto;
@@ -133,7 +163,7 @@ body {
 }
 
 .abouttext:hover {
-    background-color: rgb(0, 10, 39);
+    background-color: rgb(0, 0, 0);
 }
 
 .aboutstrong {
@@ -144,7 +174,6 @@ body {
     text-transform: uppercase;
     font-style: italic;
     text-align: right;
-    font-size: 1.2em;
     padding-right: 4%;
 }
 /* ABOUT ME END */
@@ -163,19 +192,52 @@ body {
     font-weight: bolder;
 }
 
-.schtable {
-    font-size: 1.8em;
-    text-align: center;
-    color: white;
-    font-variant: small-caps;
+.schcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-table {
+.schcontainer:hover .overlay {
+    opacity: 0;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 20px;
+    border-radius: 50%;
+    opacity: 1;
+    z-index: 1;
+    transition: .3s;
+}
+
+#hoverover {
+    max-width: 20rem;
+}
+
+.schtable {
+    text-align: center;
+    line-height: 4rem;
+    color: white;
+    font-variant: small-caps;
+    transform: rotateZ(-10deg) rotateY(20deg) scale(0.8);
+    transition: ease-in-out .6s;
+    filter: grayscale(100%) blur(2px)
+}
+
+.schtable:hover {
+    transform: rotateZ(0deg) rotateY(0deg) scale(1.0) skewX(0deg);
+    filter: none;
+}
+
+#tableStyle {
+    font-size: 3rem;
     background-image: linear-gradient(to bottom, rgba(9, 255, 255, 0.479), rgba(0, 0, 0, 0.6));
     border: 1px solid white;
-    border-radius: 5px;
+    border-radius:   5px;
     color: white;
-    font-size: 1.3em;
 }
 
 td {
@@ -184,8 +246,63 @@ td {
 
 caption{
     caption-side: top;
-    font-size: 1.3em;
     font-weight: 300;
     margin-top: -25px;
 }
 /* MY SCHEDULE END */
+
+/* SKILLS START */
+.skills {
+    background-image: url(/images/computer.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#mySkills {
+    color: white;
+}
+
+#skillBar {
+    color: white;
+}
+/* SKILLS END */
+
+/* MY MEDIA START */
+.after, .before {
+    height:50px;
+    background-color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div, section {
+    box-sizing: border-box;
+}
+#myMedia {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#videobg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height:auto;
+    z-index: -100;
+}
+
+#myMotivation {
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px black;
+}
+/* MY MEDIA END */
