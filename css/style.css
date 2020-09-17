@@ -220,6 +220,7 @@ p {
 .schtable {
     text-align: center;
     line-height: 4rem;
+    letter-spacing: 0.4rem;
     color: white;
     font-variant: small-caps;
     transform: rotateZ(-10deg) rotateY(20deg) scale(0.8);
