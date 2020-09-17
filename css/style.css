@@ -19,6 +19,23 @@ h1 {
 p {
     font-size: 2rem;
 }
+
+:root {
+    --main-font-color: white;
+    --main-font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-font-color);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    font-family: var(--main-font-family);
+}
 /* ROOT SETUP END */
 
 /* RESPONSIVE WEBSITE START */
@@ -29,10 +46,6 @@ p {
     }
     .caption {
         margin: 20px;
-    }
-    .overlay {
-        background-color: rgba(0, 0, 0, 1);
-        z-index: 1;
     }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -65,19 +78,10 @@ p {
 /* RESPONSIVE WEBSITE END */
 
 /* HEADER START */
-.header {
+#header {
     background-image: url("/images/headerfinal.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     opacity: 1;
-    animation-name: bganimate;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
+    animation: bganimate 2s ease-out;
 }
 
 @keyframes bganimate {
@@ -90,11 +94,8 @@ p {
     font-family: 'Expletus Sans', cursive;
     text-align: center;
     letter-spacing: 2px;
-    color: #ffffff;
     text-shadow: 3px 3px 5px rgb(44, 44, 44);
-    animation-name: zoomheadertext;
-    animation-duration: 2s;
-    animation-delay: 0.1s;
+    animation: zoomheadertext 2s ease 0.1s;
 }
 
 @keyframes zoomheadertext {
@@ -122,19 +123,10 @@ p {
 /* NAVIGATION END */
 
 /* ABOUT ME START */
-.about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.2px;
+#about {
     background-image: url("/images/about.jpg");
     background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    color: #ffffff;
+    letter-spacing: 0.2px;
 }
 
 .aboutwidth {
@@ -156,13 +148,26 @@ p {
     padding: 3% 4%;
     max-height: 300px;
     overflow: auto;
-    border: solid 10px rgba(0, 0, 0, .4);
+    border: solid 15px rgba(0, 0, 0, .4);
+    border-radius: 50px 0 0 0;
     background-clip: padding-box;
     transition: ease-in-out .5s;
+    animation: colorswitch 11s ease-in-out infinite, borderswitch 6s ease-in-out infinite;
 }
 
-.abouttext:hover {
-    background-color: rgb(0, 0, 0);
+@keyframes colorswitch {
+    0% {background-color: rgba(168, 0, 0, 0.6);}
+    20% {background-color: rgba(255, 115, 0, 0.699);}
+    40% {background-color: rgba(0, 143, 119, 0.699);}
+    60% {background-color: rgba(0, 48, 119, 0.6);}
+    80% {background-color: rgba(177, 0, 162, 0.6);}
+    100% {background-color: rgba(168, 0, 0, 0.6);}
+}
+
+@keyframes borderswitch {
+    0% {border-radius: 80px 0 80px 0;}
+    50% {border-radius: 0 80px 0 80px;}
+    100% {border-radius: 80px 0 80px 0;}
 }
 
 .aboutstrong {
@@ -178,16 +183,9 @@ p {
 /* ABOUT ME END */
 
 /* MY SCHEDULE START */
-.schedule {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#schedule {
     background-image: url("/images/learning.jpg");
     background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    font-family: 'Roboto', sans-serif;
     font-weight: bolder;
 }
 
@@ -195,6 +193,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    perspective: 150px;
 }
 
 .schcontainer:hover .overlay {
@@ -223,18 +222,18 @@ p {
     letter-spacing: 0.4rem;
     color: white;
     font-variant: small-caps;
-    transform: rotateZ(-10deg) rotateY(20deg) scale(0.8);
+    transform: rotateZ(1deg) rotateY(6deg) scale(0.8);
     transition: ease-in-out .6s;
-    filter: grayscale(100%) blur(2px)
+    filter: grayscale(100%) blur(1px)
 }
 
 .schtable:hover {
     z-index: 2;
-    transform: rotateZ(0deg) rotateY(0deg) scale(1.0) skewX(0deg);
+    transform: none;
     filter: none;
 }
 
-#tableStyle {
+#table-style {
     font-size: 2.2rem;
     background-image: linear-gradient(to bottom, rgba(9, 255, 255, 0.479), rgba(0, 0, 0, 0.6));
     border: 1px solid white;
@@ -242,6 +241,9 @@ p {
     color: white;
 }
 
+#table-title {
+    font-size: 1.6em;
+}
 
 td {
     border: 1px solid white;
@@ -255,46 +257,35 @@ caption{
 /* MY SCHEDULE END */
 
 /* SKILLS START */
-.skills {
+#skills {
     background-image: url(/images/computer.jpg);
     background-attachment: scroll;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-#mySkills {
+#my-skills {
     color: white;
 }
 
 #skillBar {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 20px;
     color: white;
+    font-size: 2rem;
 }
 /* SKILLS END */
 
 /* MY MEDIA START */
-.after, .before {
-    height:50px;
-    background-color: gray;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-div, section {
-    box-sizing: border-box;
-}
-#myMedia {
+#v-container {
+    font-family: var(--main-font-family);
     position: relative;
     height: 60vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .1);
 }
-#videobg {
+#video-bg {
     position: absolute;
     min-width: 100%;
     min-height: 100%;
@@ -302,14 +293,14 @@ div, section {
     z-index: -100;
 }
 
-#myMotivation {
+#my-motivation {
     font-size: 2.5rem;
     padding: 4rem;
     text-transform: uppercase;
     font-weight: bolder;
     text-align: center;
     color: white;
-    text-shadow: 1px 1px 3px black;
+    text-shadow: 1px 1px 6px black;
     line-height: 4rem;
 }
 
@@ -319,3 +310,14 @@ div, section {
     font-style: italic;
 }
 /* MY MEDIA END */
+
+/* CONTACT ME START */
+#contact {
+    background-image: url(/images/contact.jpg);
+    display: block;
+    margin: 0;
+}
+
+.contact-form {
+}
+/* CONTACT ME END */

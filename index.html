@@ -11,7 +11,7 @@
 
 <body>
     <!-- header start -->
-    <header class="header">
+    <header class="container" id="header">
         <div class="headertext">
             <h1>Relysia <span class="designsub">Design</span></h1>
         </div>
@@ -29,7 +29,7 @@
     <!-- nav end -->
 
     <!-- About Me section start -->
-    <div class="about">
+    <div class="container" id="about">
         <div class="aboutwidth">
             <h1 class="abouttitle">About Me</h1>
             <p class="abouttext">
@@ -61,15 +61,15 @@
     <!-- About Me section end -->
 
     <!-- My Schedule section start -->
-    <div class="schedule">
+    <div class="container" id="schedule">
         <div class="schcontainer">
             <div class="overlay">
                 <img src="/images/hover.png" alt="Hover over" id="hoverover">
             </div>
             <div class="schtable">
                 <h1><span>My Schedule</span></h1>
-                <table id="tableStyle">
-                    <caption id="tableTitle">Weekdays</caption>
+                <table id="table-style">
+                    <caption id="table-title">Weekdays</caption>
                     <tr>
                         <th>Day</th>
                         <th>Mon</th>
@@ -126,8 +126,8 @@
 
 
     <!-- My Skills section start -->
-    <div class="skills">
-        <h1 id="mySkills">My Skills</h1>
+    <div class="container" id="skills">
+        <h1 id="my-skills">My Skills</h1>
         <ul id="skillBar">
             <li>HTML <br/>
                 <progress min="0" max="100" value="80"></progress>
@@ -144,28 +144,18 @@
 
 
     <!-- Media section start -->
-    <section id="myMedia">
-        <video id="videobg" preload="auto" autoplay loop muted>
+    <section id="v-container">
+        <video id="video-bg" preload="auto" autoplay loop muted>
             <source src="/videos/skill.mp4" type="video/mp4">
         </video>
-        <p id="myMotivation">“Intelligence is the ability to avoid doing work, yet getting the work done.”<span id="linus">- Linus Torvalds</span></p>
+        <p id="my-motivation">“Intelligence is the ability to avoid doing work, yet getting the work done.”<span id="linus">- Linus Torvalds</span></p>
     </section>
     <!-- Media section end -->
 
     <!-- Form section start -->
-    <div class="section">
+    <div class="container" id="contact">
         <h1><span>Contact Me</span></h1>
-
-        <svg class="face" height="100" width="100">
-            <circle cx="50" cy="50" r="50" fill="#FF0000" />
-            <circle cx="30" cy="30" r="10" fill="#FFFFFF" />
-            <circle cx="70" cy="30" r="10" fill="#FFFFFF" />
-            <circle cx="30" cy="30" r="5" fill="#000000" />
-            <circle cx="70" cy="30" r="5" fill="#000000" />
-            <path d="M 30 75 q 20 -20 40 0" stroke="#FFFFFF" stroke-width="5" fill="none" />
-        </svg>
-
-        <form>
+        <form class="contact-form">
             <input name="name" placeholder="Name" type="text" required /><br />
             <input name="email" placeholder="Email" type="email" required /><br />
             <textarea name="message" placeholder="Message goes here" required></textarea><br>
