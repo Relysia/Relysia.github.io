@@ -286,6 +286,7 @@ div, section {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, .2);
 }
 #videobg {
     position: absolute;
@@ -296,8 +297,19 @@ div, section {
 }
 
 #myMotivation {
+    font-size: 2.5rem;
+    padding: 6rem;
+    text-transform: uppercase;
+    font-weight: bolder;
     text-align: center;
     color: white;
-    text-shadow: 3px 3px black;
+    text-shadow: 1px 1px 3px black;
+    line-height: 4rem;
+}
+
+#linus {
+    display: block;
+    font-size: 0.9em;
+    font-style: italic;
 }
 /* MY MEDIA END */
