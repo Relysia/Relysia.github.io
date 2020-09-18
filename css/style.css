@@ -6,10 +6,12 @@
 /* ROOT SETUP START */
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
+    font-family: var(--main-font-family);
 }
 
 body {
-    margin: auto;
+    margin: 0;
 }
 
 h1 {
@@ -47,11 +49,17 @@ p {
     .caption {
         margin: 20px;
     }
+    .s-text {
+        margin: auto;
+    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     html {
         font-size: 7px;
+    }
+    .s-text {
+        margin: auto;
     }
 }
 
@@ -60,6 +68,9 @@ p {
     html {
         font-size: 8px;
     }
+    .s-text {
+        margin: 0;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -67,12 +78,18 @@ p {
     html {
         font-size: 9px;
     }
+    .s-text {
+        margin: 0;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     html {
         font-size: 10px;
+    }
+    .s-text {
+        margin: 0;
     }
 }
 /* RESPONSIVE WEBSITE END */
@@ -108,6 +125,17 @@ p {
 
 .designsub {
     vertical-align: sub;
+}
+
+.explore {
+    color: var(--main-font-color);
+    background-color: rgba(0, 186, 192, 0.39);
+    padding: .5rem;
+    border-radius: 2rem;
+    border: solid white;
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
 }
 /* HEADER END */
 
@@ -165,9 +193,9 @@ p {
 }
 
 @keyframes borderswitch {
-    0% {border-radius: 80px 0 80px 0;}
-    50% {border-radius: 0 80px 0 80px;}
-    100% {border-radius: 80px 0 80px 0;}
+    0% {border-radius: 80px 80px 0 0;}
+    50% {border-radius: 0 0 80px 80px;}
+    100% {border-radius: 80px 80px 0 0;}
 }
 
 .aboutstrong {
@@ -184,19 +212,23 @@ p {
 
 /* MY SCHEDULE START */
 #schedule {
-    background-image: url("/images/learning.jpg");
+    background-color: rgb(22, 22, 22);
+    height: 85vh;
     background-attachment: fixed;
     font-weight: bolder;
+    flex-wrap: wrap;
 }
 
-.schcontainer {
+/* FIRST COLUMN */
+.s-col {
+    perspective: 150px;
+    flex: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    perspective: 150px;
 }
 
-.schcontainer:hover .overlay {
+.s-col:hover .overlay {
     opacity: 0;
     z-index: -1;
 }
@@ -204,7 +236,6 @@ p {
 .overlay {
     position: absolute;
     background-color: rgba(0, 0, 0, .5);
-    padding: 20px;
     border-radius: 50%;
     opacity: 1;
     z-index: 2;
@@ -219,7 +250,7 @@ p {
     z-index: 1;
     text-align: center;
     line-height: 4rem;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.3rem;
     color: white;
     font-variant: small-caps;
     transform: rotateZ(1deg) rotateY(6deg) scale(0.8);
@@ -235,6 +266,8 @@ p {
 
 #table-style {
     font-size: 2.2rem;
+    margin-left: auto;
+    margin-right: auto;
     background-image: linear-gradient(to bottom, rgba(9, 255, 255, 0.479), rgba(0, 0, 0, 0.6));
     border: 1px solid white;
     border-radius:   5px;
@@ -253,6 +286,18 @@ caption{
     caption-side: top;
     font-weight: 300;
     margin-top: -25px;
+}
+
+/* SECOND COLUMN START */
+.s-col2 {
+    flex: 50%;
+}
+
+.s-text {
+    width: 80%;
+    text-align: justify;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 /* MY SCHEDULE END */
 
@@ -274,25 +319,25 @@ caption{
 }
 
 progress {
-    border: 3px solid black;
+    border: 3px solid white;
     width: 70%;
     height: 50px;
-    background: rgb(7, 154, 173);
 }
 
 progress::-webkit-progress-value {
-    background: rgb(7, 154, 173);
+    background: linear-gradient(to bottom, rgba(9, 255, 255, 0.479), rgba(0, 0, 0, 0.6));
 }
 
 #skillBar {
     list-style-type: none;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     width: 40rem;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.705);
     border-radius: 20px;
+    border: solid 5px white;
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-right: auto;
     margin-left: auto;
     line-height: 4rem;
@@ -301,9 +346,8 @@ progress::-webkit-progress-value {
 
 /* MY MEDIA START */
 #v-container {
-    font-family: var(--main-font-family);
     position: relative;
-    height: 60vh;
+    height: 55vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -358,17 +402,18 @@ progress::-webkit-progress-value {
 input {
     font-size: 1.8rem;
     text-align: center;
-    width: 60rem;
+    width: 42rem;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 3px solid rgb(126, 200, 235);
     border-radius: 4px;
     box-sizing: border-box;
+    text-transform: uppercase;
 }
 
 textarea {
-    width: 60rem;
+    width: 42rem;
     font-size: 1.7rem;
     padding: 12px 20px;
     margin: 8px 0;
@@ -379,6 +424,11 @@ textarea {
     box-sizing: border-box;
     resize: none;
     text-align: center;
+    text-transform: uppercase;
+}
+
+input[type=color] {
+    height: 60px;
 }
 
 input[type=submit] {
@@ -388,3 +438,28 @@ input[type=submit] {
     cursor: pointer;
 }
 /* CONTACT ME END */
+
+/* FOOTER START */
+#links {
+    height: 30vh;
+    background-color: rgb(39, 39, 39);
+}
+
+.link-text {
+    padding-right: 50px;
+}
+
+.follow {
+    text-align: center;
+}
+
+.follow-icon {
+    width: 10rem;
+}
+
+.copyright {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+}
+/* FOOTER END */
