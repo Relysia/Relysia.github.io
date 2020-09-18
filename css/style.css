@@ -406,9 +406,15 @@ input {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 3px solid rgb(126, 200, 235);
+    border: 3px solid white;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.616);
+    color: white;
+}
+
+::placeholder {
+    color: white;
     text-transform: uppercase;
 }
 
@@ -424,7 +430,12 @@ textarea {
     box-sizing: border-box;
     resize: none;
     text-align: center;
-    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.616);
+    color: white;
+}
+
+input[tpye=date] {
+    color: white;
 }
 
 input[type=color] {
@@ -432,7 +443,7 @@ input[type=color] {
 }
 
 input[type=submit] {
-    background-color: #0ea6cc;
+    background-color: #0ea6ccb6;
     color: white;
     border: none;
     cursor: pointer;
