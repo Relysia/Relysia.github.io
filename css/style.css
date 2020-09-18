@@ -130,7 +130,7 @@ p {
 .explore {
     color: var(--main-font-color);
     background-color: rgba(0, 186, 192, 0.39);
-    padding: .5rem;
+    padding: .8rem;
     border-radius: 2rem;
     border: solid white;
     font-size: 2rem;
