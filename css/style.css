@@ -233,6 +233,12 @@ p {
     z-index: -1;
 }
 
+.s-col:hover .schtable {
+    z-index: 1;
+    transform: none;
+    filter: none;
+}
+
 .overlay {
     position: absolute;
     background-color: rgba(0, 0, 0, .5);
@@ -256,12 +262,6 @@ p {
     transform: rotateZ(1deg) rotateY(6deg) scale(0.8);
     transition: ease-in-out .6s;
     filter: grayscale(100%) blur(1px)
-}
-
-.schtable:hover {
-    z-index: 2;
-    transform: none;
-    filter: none;
 }
 
 #table-style {
