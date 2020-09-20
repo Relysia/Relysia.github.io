@@ -106,7 +106,7 @@ p {
     100% {opacity: 1;}
 }
 
-.headertext{
+.header-text{
     font-variant: small-caps;
     font-family: 'Expletus Sans', cursive;
     text-align: center;
@@ -123,7 +123,7 @@ p {
     100% {transform: scale(1);}
 }
 
-.designsub {
+.design-sub {
     vertical-align: sub;
 }
 
@@ -157,18 +157,18 @@ p {
     letter-spacing: 0.2px;
 }
 
-.aboutwidth {
+.about-col {
     width: 70%;
 }
 
-.abouttitle {
+.about-title {
     text-transform: uppercase;
     text-align: center;
     margin: auto;
     font-weight: 900;
 }
 
-.abouttext {
+.about-text {
     background-color: rgba(0, 0, 0, .6);
     text-transform: uppercase;
     text-indent: 30px;
@@ -198,7 +198,7 @@ p {
     100% {border-radius: 80px 80px 80px 80px;}
 }
 
-.aboutstrong {
+.about-strong {
     font-weight: bolder;
 }
 
@@ -220,7 +220,7 @@ p {
 }
 
 /* FIRST COLUMN */
-.s-col {
+.sch-col {
     perspective: 480px;
     flex: 50%;
     display: flex;
@@ -228,12 +228,12 @@ p {
     align-items: center;
 }
 
-.s-col:hover .overlay {
+.sch-col:hover .overlay {
     opacity: 0;
     z-index: -1;
 }
 
-.s-col:hover .schtable {
+.sch-col:hover .sch-table {
     z-index: 1;
     transform: none;
     filter: none;
@@ -252,7 +252,7 @@ p {
     max-width: 20rem;
 }
 
-.schtable {
+.sch-table {
     z-index: 1;
     text-align: center;
     line-height: 4rem;
@@ -289,11 +289,11 @@ caption{
 }
 
 /* SECOND COLUMN START */
-.s-col2 {
+.sch-col2 {
     flex: 50%;
 }
 
-.s-text {
+.sch-text {
     width: 80%;
     text-align: justify;
     padding-top: 5rem;
@@ -328,7 +328,7 @@ progress::-webkit-progress-value {
     background: linear-gradient(to bottom, rgba(9, 255, 255, 0.479), rgba(0, 0, 0, 0.6));
 }
 
-#skillBar {
+#skill-bar {
     list-style-type: none;
     text-align: center;
     padding: 10px;
@@ -371,7 +371,7 @@ progress::-webkit-progress-value {
 /* JAVASCRIPT END */
 
 /* MY MEDIA START */
-#v-container {
+#video-container {
     position: relative;
     height: 55vh;
     overflow: hidden;
