@@ -49,7 +49,7 @@ p {
     .caption {
         margin: 20px;
     }
-    .s-text {
+    .sch-text {
         margin: auto;
     }
 }
@@ -58,7 +58,7 @@ p {
     html {
         font-size: 7px;
     }
-    .s-text {
+    .sch-text {
         margin: auto;
     }
 }
@@ -68,7 +68,7 @@ p {
     html {
         font-size: 8px;
     }
-    .s-text {
+    .sch-text {
         margin: 0;
     }
 }
@@ -78,7 +78,7 @@ p {
     html {
         font-size: 9px;
     }
-    .s-text {
+    .sch-text {
         margin: 0;
     }
 }
@@ -88,7 +88,7 @@ p {
     html {
         font-size: 10px;
     }
-    .s-text {
+    .sch-text {
         margin: 0;
     }
 }
