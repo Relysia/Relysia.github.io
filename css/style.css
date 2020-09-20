@@ -129,7 +129,7 @@ p {
 
 .explore {
     color: var(--main-font-color);
-    background-color: rgba(0, 186, 192, 0.39);
+    background-color: rgba(0, 0, 0, 0.288);
     padding: .8rem;
     border-radius: 2rem;
     border: solid white;
@@ -193,9 +193,9 @@ p {
 }
 
 @keyframes borderswitch {
-    0% {border-radius: 80px 80px 0 0;}
-    50% {border-radius: 0 0 80px 80px;}
-    100% {border-radius: 80px 80px 0 0;}
+    0% {border-radius: 80px 80px 80px 80px;}
+    50% {border-radius: 0 0 0 0;}
+    100% {border-radius: 80px 80px 80px 80px;}
 }
 
 .aboutstrong {
@@ -221,7 +221,7 @@ p {
 
 /* FIRST COLUMN */
 .s-col {
-    perspective: 150px;
+    perspective: 480px;
     flex: 50%;
     display: flex;
     justify-content: center;
@@ -259,8 +259,8 @@ p {
     letter-spacing: 0.3rem;
     color: white;
     font-variant: small-caps;
-    transform: rotateZ(1deg) rotateY(6deg) scale(0.8);
-    transition: ease-in-out .6s;
+    transform: rotateZ(1deg) rotateY(200deg) scale(0.8);
+    transition: ease-in-out .8s;
     filter: grayscale(100%) blur(1px)
 }
 
@@ -344,6 +344,32 @@ progress::-webkit-progress-value {
 }
 /* SKILLS END */
 
+/* JAVASCRIPT START */
+#javascript {
+    background-image: url(/images/javascript.jpg);
+    background-attachment: fixed;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+}
+
+.java-button {
+    font-size: 3rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.534);
+    height: 5rem;
+    text-align: center;
+}
+
+#test {
+    color: rgb(255, 255, 255);
+    border: 3px 3px 4px black;
+    padding: 10px;
+    font-size: 4rem;
+    text-align: center;
+}
+/* JAVASCRIPT END */
+
 /* MY MEDIA START */
 #v-container {
     position: relative;
@@ -369,7 +395,7 @@ progress::-webkit-progress-value {
     font-weight: bolder;
     text-align: center;
     color: white;
-    text-shadow: 1px 1px 6px black;
+    text-shadow: 1px 1px 4px black;
     line-height: 4rem;
 }
 
@@ -425,7 +451,7 @@ textarea {
     margin: 8px 0;
     height: 10rem;
     display: inline-block;
-    border: 3px solid rgb(126, 200, 235);
+    border: 3px solid white;
     border-radius: 4px;
     box-sizing: border-box;
     resize: none;
