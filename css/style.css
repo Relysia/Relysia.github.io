@@ -52,6 +52,9 @@ p {
     .sch-text {
         margin: auto;
     }
+    .set-color {
+        margin: auto;
+    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -59,6 +62,9 @@ p {
         font-size: 7px;
     }
     .sch-text {
+        margin: auto;
+    }
+    .set-color {
         margin: auto;
     }
 }
@@ -71,6 +77,9 @@ p {
     .sch-text {
         margin: 0;
     }
+    .set-color {
+        margin: 0;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -81,6 +90,9 @@ p {
     .sch-text {
         margin: 0;
     }
+    .set-color {
+        margin: 0;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -89,6 +101,9 @@ p {
         font-size: 10px;
     }
     .sch-text {
+        margin: 0;
+    }
+    .set-color {
         margin: 0;
     }
 }
@@ -113,6 +128,7 @@ p {
     letter-spacing: 2px;
     text-shadow: 3px 3px 5px rgb(44, 44, 44);
     animation: zoomheadertext 2s ease 0.1s;
+    transition: ease-in-out .3s;
 }
 
 @keyframes zoomheadertext {
@@ -125,17 +141,28 @@ p {
 
 .design-sub {
     vertical-align: sub;
+    transition: ease-in-out .3s;
+}
+
+.design-sub:hover {
+    color: rgb(255, 77, 33);
 }
 
 .explore {
     color: var(--main-font-color);
     background-color: rgba(0, 0, 0, 0.288);
     padding: .8rem;
-    border-radius: 2rem;
-    border: solid white;
     font-size: 2rem;
     text-decoration: none;
     text-align: center;
+    transition: .3s ease-in-out;
+}
+
+.explore:hover {
+    font-size: 2.3rem;
+    background-color: rgba(0, 0, 0, 0.664);
+    border-bottom: rgb(255, 77, 33) solid;
+    border-top: rgb(255, 77, 33) solid;
 }
 /* HEADER END */
 
@@ -212,11 +239,13 @@ p {
 
 /* MY SCHEDULE START */
 #schedule {
-    background-color: rgb(22, 22, 22);
-    height: 85vh;
+    background-color: rgb(0, 0, 0);
+    height: 90vh;
     background-attachment: fixed;
     font-weight: bolder;
     flex-wrap: wrap;
+    opacity: 80%;
+    transition: ease-in-out 1s;
 }
 
 /* FIRST COLUMN */
@@ -299,6 +328,47 @@ caption{
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
+
+.set-color {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.light-it {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 3px rgb(212, 212, 212);
+    height: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px black;
+    transition: ease-in-out .25s;
+    animation: zoomLight 1s ease-in-out infinite, colorLight 1s ease-in-out infinite;
+}
+
+@keyframes zoomLight {
+    0% {font-size: 2rem;}
+    50% {font-size: 2.3rem;}
+    100% {font-size: 2rem;}
+}
+
+@keyframes colorLight {
+    0% {border: solid 3px rgb(212, 212, 212);}
+    50% {border: solid 4px rgb(218, 25, 0);}
+    100% {border: solid 3px rgb(212, 212, 212);}
+}
+
+.light-it:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    cursor: pointer;
+}
 /* MY SCHEDULE END */
 
 /* SKILLS START */
@@ -346,11 +416,26 @@ progress::-webkit-progress-value {
 
 /* JAVASCRIPT START */
 #javascript {
-    background-image: url(/images/javascript.jpg);
+    background: linear-gradient(90deg, #000000, #535353, #a0a0a0, #e7e7e7);
+	background-size: 300% 300%;
     background-attachment: fixed;
+    height: 70vh;
     font-size: 3rem;
     text-align: center;
     text-shadow: 2px 2px 2px black;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+    }
 }
 
 .java-button {
