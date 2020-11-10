@@ -10,6 +10,12 @@
   text-decoration: none;
 }
 
+@media (max-width: 1200px) {
+  * {
+    font-size: 8px;
+  }
+}
+
 @media (max-width: 800px) {
   * {
     font-size: 7px;
