@@ -110,7 +110,7 @@ p {
   padding: 100px 0 100px 0;
   text-align: center;
   color: #fff;
-  background-image: url(/sites/layouts/img/gate.jpg);
+  background-image: url(/layouts/img/gate.jpg);
   background-position: center;
   background-size: cover;
 }
