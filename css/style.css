@@ -7,6 +7,7 @@
   outline: 0;
   font-size: 10px;
   font-family: 'Roboto Condensed', sans-serif;
+  text-decoration: none;
 }
 
 .grid-container {
@@ -24,16 +25,24 @@
 }
 
 .grid:nth-child(1) {
-  background-color: #c70000;
+  background-image: url(/img/plantatree.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .grid:nth-child(2) {
-  background-color: #fa6a6a;
+  background-image: url(/img/grandma.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .grid:nth-child(3) {
-  background-color: #7a2727;
+  background-image: url(/img/grid.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .grid:nth-child(4) {
-  background-color: #6ac5fa;
+  background-image: url(/img/super.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .grid:nth-child(5) {
   background-color: #197cb6;
@@ -56,4 +65,5 @@ p {
   font-size: 4rem;
   color: #fff;
   text-align: center;
+  text-shadow: 2px 2px #000;
 }
