@@ -10,6 +10,12 @@
   text-decoration: none;
 }
 
+@media (max-width: 800px) {
+  * {
+    font-size: 7px;
+  }
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
