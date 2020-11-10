@@ -14,8 +14,16 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   height: 100vh;
+}
+
+@media (max-width: 800px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 240px);
+  }
 }
 
 .grid {
