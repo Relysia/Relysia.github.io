@@ -38,7 +38,7 @@
 }
 
 .box:hover {
-  flex-grow: 12;
+  flex-grow: 8;
 }
 
 @media (max-width: 700px) {
