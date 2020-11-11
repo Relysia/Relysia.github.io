@@ -38,7 +38,7 @@
 }
 
 .box:hover {
-  flex-grow: 17;
+  flex-grow: 18;
 }
 
 .box:nth-child(1) {
