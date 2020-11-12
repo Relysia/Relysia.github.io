@@ -7,8 +7,11 @@
   font-size: 10px;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
-  height: 100vh;
   background: linear-gradient(315deg, rgba(28,76,128,1), rgba(113,167,189,1));
   display: flex;
   flex-direction: column;
