@@ -1,0 +1,108 @@
+/* Basic Start */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(315deg, rgba(28,76,128,1), rgba(113,167,189,1));
+}
+
+p {
+  font-size: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  font-size: 4.4rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  transition: .3s ease-in-out;
+}
+
+a:hover {
+  color: #61b0ff;
+}
+
+.header-background a {
+  padding: 0 15px;
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 3px #000000;
+}
+
+h1 {
+  color: #fff;
+  font-size: 6rem;
+  margin-top: -10rem;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+
+hr {
+  color: #000;
+}
+/* Basic End */
+
+/* Picture Start */
+.main-container {
+  text-align: center;
+  box-shadow: 9px 9px 3px #000000a8;
+}
+
+.header-background {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 270px;
+  width: 100%;
+  background-image: url(../img/regbackground.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#login-back {
+  background-image: url(../img/logbackground.jpg);
+}
+/* Picture End */
+
+/* Form Start */
+form {
+  background-color: #ffffff;
+  padding: 55px 60px 30px 60px;
+}
+
+form button {
+  width: 355px;
+  margin: 50px 0 35px 0;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 2.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  background-color: rgb(75, 152, 197);
+  transition: .4s ease-in-out;
+}
+
+form button:hover {
+  background-color: #3269a0;
+}
+
+form input {
+  width: 340px;
+  background-color: #d8d8d8;
+  font-family: 'Poppins', sans-serif;
+  padding: 4px 0 4px 10px;
+  font-size: 2.2rem;
+}
+/* Form End */

@@ -1,0 +1,125 @@
+/* Basic Start */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(315deg, rgba(28,76,128,1), rgba(113,167,189,1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+a {
+  font-size: 3rem;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+a:visited {
+  color: #000;
+}
+
+a:hover {
+  color: #3676be;
+}
+
+label {
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+form p:first-of-type {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  color: #fff;
+  font-size: 6rem;
+  margin-top: -10rem;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+/* Basic End */
+
+/* Main Start */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px;
+  gap: 10px;
+  background-color: #fff;
+  box-shadow: 9px 9px 3px #000000a8;
+}
+/* Main End */
+
+/* Form Start */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#picture {
+  display: none;
+}
+
+#upload {
+  color: #fff;
+  background-color: #61a4f0;
+  font-size: 2rem;
+  padding: 3px 7px;
+  border-radius: 10px;
+  border: 3px solid rgb(26, 25, 122);
+  font-family: 'Poppins', sans-serif;
+  transition: .4s ease-in-out;
+}
+
+#upload:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+input[type=radio] {
+  margin: 0 8px 0 8px;
+  vertical-align: middle;
+}
+
+#no-margin {
+  margin-left: 0;
+}
+
+input[type=email], input[type=password] {
+  width: 220px;
+  font-size: 2rem;
+}
+
+form button {
+  color: #000;
+  background-color: #fff;
+  font-size: 2rem;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: 3px solid rgb(26, 25, 122);
+  font-family: 'Poppins', sans-serif;
+  transition: .4s ease-in-out;
+}
+
+form button:hover {
+  background-color: #3b7ca7;
+  color: #fff;
+}
+/* Form End */

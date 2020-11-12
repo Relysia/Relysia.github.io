@@ -68,6 +68,11 @@
   background-position: center;
   background-size: cover;
 }
+.box:nth-child(5) {
+  background-image: url(/img/catvshuman.jpg);
+  background-position: center;
+  background-size: cover;
+}
 
 p {
   text-transform: uppercase;

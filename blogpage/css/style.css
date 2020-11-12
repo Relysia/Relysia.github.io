@@ -1,0 +1,260 @@
+/* Basic Start */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@800&display=swap');
+
+* {
+  margin: 0;
+  font-size: 10px;
+}
+
+body {
+  color: #fff;
+}
+
+p {
+  font-size: 2.4rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+/* Basic End */
+
+/* Header Start */
+.header-container h1 {
+  font-size: 6rem;
+  padding: 20px;
+  font-family: 'Lobster', cursive;
+}
+
+.header-container {
+  position: sticky;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  padding: 0;
+  background-color: #ffffff;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 2px solid black;
+}
+
+.header-container h1 {
+  color: #000;
+  text-align: center;
+  font-size: 5rem;
+}
+
+#home-link {
+  align-self: center;
+  padding-left: 40px;
+  margin-bottom: -52px;
+}
+
+.nav-link {
+  padding-right: 40px;
+  text-align: right;
+  align-self: center;
+}
+
+.nav-link a {
+  color: #000;
+  padding: 10px;
+}
+
+.background-image {
+  width: 100%;
+  height: 700px;
+  background-image: url(https://media.hazipatika.com/cikkek/main/0/burmai_macska_n_1-hd.jpg);
+  background-position: 0px -150px;
+  background-size: cover;
+}
+/* Header End */
+
+/* Main Start */
+.home-container {
+  max-width: 1300px;
+  min-height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(600px, auto) 300px;
+  grid-template-rows: min-content min-content min-content;
+  grid-template-areas: 
+  "header header"
+  "main sidebar"
+  "footer footer";
+}
+/* Main End */
+
+/* Blog Start */
+.main-container {
+  background-color: #fff;
+  color: #000;
+  grid-area: main;
+}
+
+.anchor {
+  position: relative;
+  top: -90px;
+  visibility: hidden;
+}
+
+.anchor:first-of-type {
+  top: -40px;
+}
+
+.blog-post {
+  background-color: #D9D9D9;
+  text-align: justify;
+  margin: 50px 50px 50px 0;
+  padding: 30px;
+}
+
+.blog-post h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.post-image {
+  display: block;
+  margin: auto;
+  padding: 10px 0 30px 0;
+}
+
+.post-content::first-letter {
+  font-size: 13rem;
+  float: left;
+  padding-right: 13px;
+}
+
+.post-footer {
+  text-align: right;
+  padding-top: 10px;
+}
+
+.post-footer img {
+  vertical-align: middle;
+  padding-right: 5px;
+}
+/* Blog End */
+
+/* Sidebar Start */
+.sidebar-container {
+  background-color: #404040;
+  grid-area: sidebar;
+  padding: 20px 20px 0 20px;
+  margin: 50px 0;
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 102px;
+}
+
+.sidebar-sticky div:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-sticky hr {
+  margin: 0 0 20px 0;
+}
+
+.image-center {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-center img {
+  vertical-align: middle;
+  padding: 10px 10px 10px 0;
+}
+
+.sidebar-grid {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  grid-template-areas: 
+  "pic1 text1"
+  "pic2 text2"
+  "pic3 text3";
+}
+
+#pic1 {
+  grid-area: pic1;
+}
+
+#pic2 {
+  grid-area: pic2;
+}
+
+#pic3 {
+  grid-area: pic3;
+}
+
+#text1 {
+  grid-area: text1;
+  padding-left: 10px;
+}
+
+#text2 {
+  grid-area: text2;
+  padding-left: 10px;
+}
+
+#text3 {
+  grid-area: text3;
+  padding-left: 10px;
+  margin-top: -10px;
+}
+
+/* Sidebar End */
+
+/* Footer Start */
+.footer-container {
+  height: 100px;
+  background-color: #8d5c45;
+  grid-area: footer;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  "footer-head footer-head"
+  "copyright copyright";
+}
+
+.contact {
+  justify-self: center;
+  align-self: center;
+  
+}
+
+.contact a {
+  padding: 10px;
+}
+
+.footer-nav {
+  justify-self: center;
+  align-self: center;
+}
+
+.footer-nav a {
+  padding: 10px;
+}
+
+.copyright {
+  grid-area: copyright;
+  justify-self: center;
+  align-self: center;
+}
+/* Footer End */
