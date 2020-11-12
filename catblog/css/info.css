@@ -9,11 +9,8 @@
   font-size: 10px;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
+  height: 100vh;
   background: linear-gradient(315deg, rgba(28,76,128,1), rgba(113,167,189,1));
   display: flex;
   flex-direction: column;
@@ -23,7 +20,7 @@ body {
 }
 
 a {
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
 }
@@ -38,9 +35,9 @@ a:hover {
 
 #title {
   color: #fff;
-  font-size: 6rem;
-  margin-top: -10rem;
-  margin-bottom: 4rem;
+  font-size: 5rem;
+  margin-top: -8rem;
+  margin-bottom: 3rem;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
 }
@@ -52,24 +49,24 @@ a:hover {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  padding: 50px 60px;
+  padding: 40px 48px;
   box-shadow: 9px 9px 3px #000000a8;
 }
 
 .main-container h1 {
-  font-size: 4rem;
+  font-size: 3.2rem;
 }
 
 table {
   border: 4px solid #000;
   text-align: left;
-  padding: 30px;
+  padding: 24px;
 }
 
 td {
-  font-size: 2.2rem;
+  font-size: 1.7rem;
   font-family: 'Roboto', sans-serif;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 tr td:first-of-type {
@@ -87,5 +84,5 @@ tr td:nth-of-type(2) {
 
 #center-td a {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }

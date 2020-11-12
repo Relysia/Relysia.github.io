@@ -7,11 +7,8 @@
   font-size: 10px;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
+  height: 100vh;
   color: #000;
   display: flex;
   flex-direction: column;
@@ -21,12 +18,12 @@ body {
 }
 
 p {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: 'Roboto', sans-serif;
 }
 
 a {
-  font-size: 4.4rem;
+  font-size: 3.5rem;
   color: #fff;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
@@ -38,16 +35,16 @@ a:hover {
 }
 
 .header-background a {
-  padding: 0 15px;
-  margin-bottom: 10px;
-  text-shadow: 3px 3px 3px #000000;
+  padding: 0 12px;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 2px #000000;
 }
 
 h1 {
   color: #fff;
-  font-size: 6rem;
-  margin-top: -10rem;
-  margin-bottom: 4rem;
+  font-size: 5rem;
+  margin-top: -8rem;
+  margin-bottom: 3rem;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
 }
@@ -67,7 +64,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 270px;
+  height: 215px;
   width: 100%;
   background-image: url(../img/regbackground.jpg);
   background-position: center;
@@ -82,15 +79,15 @@ hr {
 /* Form Start */
 form {
   background-color: #ffffff;
-  padding: 55px 60px 30px 60px;
+  padding: 44px 50px 24px 50px;
 }
 
 form button {
-  width: 355px;
-  margin: 50px 0 35px 0;
-  padding: 10px 0;
+  width: 264px;
+  margin: 40px 0 28px 0;
+  padding: 8px 0;
   color: #fff;
-  font-size: 2.1rem;
+  font-size: 1.7rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
   background-color: rgb(75, 152, 197);
@@ -102,10 +99,10 @@ form button:hover {
 }
 
 form input {
-  width: 340px;
+  width: 250px;
   background-color: #d8d8d8;
   font-family: 'Poppins', sans-serif;
-  padding: 4px 0 4px 10px;
-  font-size: 2.2rem;
+  padding: 3.2px 0 3.2px 8px;
+  font-size: 1.7rem;
 }
 /* Form End */

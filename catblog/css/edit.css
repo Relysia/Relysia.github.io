@@ -7,11 +7,8 @@
   font-size: 10px;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
+  height: 100vh;
   background: linear-gradient(315deg, rgba(28,76,128,1), rgba(113,167,189,1));
   display: flex;
   flex-direction: column;
@@ -21,7 +18,7 @@ body {
 }
 
 a {
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
 }
@@ -35,20 +32,20 @@ a:hover {
 }
 
 label {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: 'Poppins', sans-serif;
 }
 
 form p:first-of-type {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-family: 'Roboto', sans-serif;
 }
 
 h1 {
   color: #fff;
-  font-size: 6rem;
-  margin-top: -10rem;
-  margin-bottom: 4rem;
+  font-size: 5rem;
+  margin-top: -8rem;
+  margin-bottom: 3rem;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
 }
@@ -60,7 +57,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 80px;
+  padding: 32px 80px;
   gap: 10px;
   background-color: #fff;
   box-shadow: 9px 9px 3px #000000a8;
@@ -73,7 +70,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 #picture {
@@ -83,8 +80,8 @@ form {
 #upload {
   color: #fff;
   background-color: #61a4f0;
-  font-size: 2rem;
-  padding: 3px 7px;
+  font-size: 1.6rem;
+  padding: 2.4px 5.6px;
   border-radius: 10px;
   border: 3px solid rgb(26, 25, 122);
   font-family: 'Poppins', sans-serif;
@@ -97,7 +94,7 @@ form {
 }
 
 input[type=radio] {
-  margin: 0 8px 0 8px;
+  margin: 0 7px 3px 7px;
   vertical-align: middle;
 }
 
@@ -106,15 +103,15 @@ input[type=radio] {
 }
 
 input[type=email], input[type=password] {
-  width: 220px;
-  font-size: 2rem;
+  width: 175px;
+  font-size: 1.5rem;
 }
 
 form button {
   color: #000;
   background-color: #fff;
-  font-size: 2rem;
-  padding: 6px 12px;
+  font-size: 1.6rem;
+  padding: 4.8px 9.6px;
   border-radius: 10px;
   border: 3px solid rgb(26, 25, 122);
   font-family: 'Poppins', sans-serif;
