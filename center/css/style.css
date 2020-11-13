@@ -1,0 +1,17 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Super Center */
+html {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Font Style */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  border-style: dotted;
+  padding: 10px;
+}

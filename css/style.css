@@ -2,16 +2,9 @@
 
 * {
   margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
   font-size: 10px;
   font-family: 'Roboto Condensed', sans-serif;
   text-decoration: none;
-}
-
-html, body {
-  height: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -26,23 +19,43 @@ html, body {
   }
 }
 
-.flex-container {
+/* FLEXBOX SOLUTION */
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "flex1 flex2";
+}
+
+.flex-container1 {
+  grid-area: flex1;
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
+}
+
+.flex-container2 {
+  grid-area: flex2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 .box {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   flex-grow: 1;
-  transition: .7s ease-in-out;
+  transition: .8s ease-in-out;
 }
 
 .box:hover {
-  flex-grow: 8;
+  flex-grow: 6;
 }
 
 @media (max-width: 700px) {
@@ -51,32 +64,43 @@ html, body {
   }
 }
 
-.box:nth-child(1) {
-  background-image: url(/img/plantatree.jpg);
+.flex-container1 .box:nth-of-type(1) {
+  background-image: url(../img/spaceship.jpg);
   background-position: center;
   background-size: cover;
 }
 
-.box:nth-child(2) {
-  background-image: url(/img/grandma.jpg);
+.flex-container1 .box:nth-of-type(2) {
+  background-image: url(../img/plantatree.jpg);
   background-position: center;
   background-size: cover;
 }
-.box:nth-child(3) {
-  background-image: url(/img/grid.jpg);
+
+.flex-container1 .box:nth-of-type(3) {
+  background-image: url(../img/grandma.jpg);
   background-position: center;
   background-size: cover;
 }
-.box:nth-child(4) {
-  background-image: url(/img/super.jpg);
+
+.flex-container2 .box:nth-of-type(1) {
+  background-image: url(../img/grid.jpg);
   background-position: center;
   background-size: cover;
 }
-.box:nth-child(5) {
-  background-image: url(/img/catvshuman.jpg);
+
+.flex-container2 .box:nth-of-type(2) {
+  background-image: url(../img/super.jpg);
   background-position: center;
   background-size: cover;
 }
+
+.flex-container2 .box:nth-of-type(3) {
+  background-image: url(../img/catvshuman.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* FLEXBOX SOLUTION */
 
 p {
   text-transform: uppercase;
