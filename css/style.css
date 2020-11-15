@@ -52,6 +52,7 @@ a {
 @media (max-width: 520px) {
   .flex-container {
     flex-direction: column;
+    height: 100%;
   }
 }
 
@@ -61,6 +62,12 @@ a {
   height: 100%;
   flex-grow: 1;
   transition: .8s ease-in-out;
+}
+
+@media (max-width: 520px) {
+  .left-container, .right-container {
+    height: 100vh;
+  }
 }
 
 .grow:hover {
