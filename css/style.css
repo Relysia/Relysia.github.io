@@ -67,7 +67,7 @@ a {
   flex-grow: 1.5;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .grow:hover {
     flex-grow: 1;
   }
