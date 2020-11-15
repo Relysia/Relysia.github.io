@@ -19,9 +19,9 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
   * {
-    font-size: 5px;
+    font-size: 6px;
   }
 }
 
@@ -49,15 +49,13 @@ a {
   height: 100vh;
 }
 
-.left-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  flex-grow: 1;
-  transition: .8s ease-in-out;
+@media (max-width: 520px) {
+  .flex-container {
+    flex-direction: column;
+  }
 }
 
-.right-container {
+.left-container, .right-container {
   display: flex;
   flex-direction: column;
   height: 100%;
