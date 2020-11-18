@@ -15,12 +15,6 @@
 
 @media (max-width: 800px) {
   * {
-    font-size: 7px;
-  }
-}
-
-@media (max-width: 520px) {
-  * {
     font-size: 6px;
   }
 }
@@ -49,7 +43,7 @@ a {
   height: 100vh;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 650px) {
   .flex-container {
     flex-direction: column;
     height: 100%;
@@ -64,7 +58,7 @@ a {
   transition: .8s ease-in-out;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 650px) {
   .left-container, .middle-container, .right-container {
     height: 100vh;
   }
@@ -91,10 +85,10 @@ a {
 }
 
 .box:hover {
-  flex-grow: 4;
+  flex-grow: 3;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .box:hover {
     flex-grow: 1;
   }
