@@ -1,5 +1,6 @@
-body {
+html, body {
     margin: 0;
+    height: 100%;
     background-color: #000;
     transition: 1s;
 }
@@ -67,24 +68,25 @@ body {
     justify-content: center;
     align-items: center;
     
+    top: 100%;
+    margin-top: -20px;
+    transform: translateY(-100%);
     transition: 1s;
 }
 
 /* RESPONSIVE HEIGHT */
+@media (max-height: 650px) {
+	.hint {
+		top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+	}
+}
+
 @media (max-height: 549px) {
-    .hint {
-        top: 20px;
-    }
-}
-
-@media (min-height: 550px) {
-    .hint {
-        top: calc(50vh - 120px);
-    }
-}
-
-@media (min-height: 600px) {
-    .hint {
-        top: calc(100vh - 250px)
-    }
+	.hint {
+		top: 0%;
+        transform: translateY(-0%);
+        margin-top: 20px;
+	}
 }
