@@ -38,7 +38,7 @@ header nav {
 header nav ul {
   display: flex;
   align-self: center;
-  gap: 40px;
+  gap: 10px;
   list-style: none;
 }
 header nav ul li {
