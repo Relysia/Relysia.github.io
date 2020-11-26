@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:wght@300&display=swap')
+
+$main-font: 'Open Sans', sans-serif
+$extrabold-font: 'Montserrat', sans-serif
+
+// FUNCTIONS
+=grid-function($column, $row, $area)
+  display: grid
+  grid-template-columns: $column
+  grid-template-rows: $row
+  grid-template-areas: $area
+
+=flex-function($direction, $justify, $align)
+  display: flex
+  flex-direction: $direction
+  justify-content: $justify
+  align-items: $align
+
+// BLOCKS
+%flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+%basic-rules
+  font-family: $main-font
+  font-size: 10px
+  margin: 0
+  text-decoration: none
+
+*
+  @extend %basic-rules
+
+html, body, .header-container, #container
+  min-height: 100%
+
+body
+  width: 100%
+  max-width: 1280px
+  margin: auto
+
+#container
+  border: 14px solid #d6d6d6
+
+.header-container
+  background: url('../png/mountain.png')
+  background-size: cover
+  background-position: center
+  margin-bottom: 40px
+  text-align: center
+  nav
+    padding: 12px 15px
+    display: flex
+    justify-content: space-between
+
+.burger-container
+  height: 30px
+  width: 30px
+  background-color: white
+  border-radius: 50%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  gap: 3px
+  div
+    width: 16px
+    height: 2px
+    background-color: red
+    transition: .5s
+  &:hover
+    cursor: pointer
+    #burger1
+      transform: rotate(-45deg) translate(-3px, 4px)
+    #burger2
+      opacity: 0
+    #burger3
+      transform: rotate(45deg) translate(-3px, -4px)
+
+#logo
+  margin-top: 108px
+  // @extend %flex-center 
+  // margin: 108px auto 0 auto 
+
+.header-container
+  section
+    background: linear-gradient(#ffffff00, #ffffff)
+    @extend %flex-center
+    flex-direction: column
+    h2
+      font-family: $extrabold-font
+      font-size: 2.4rem
+      color: white
+      background-color: #ff0000
+      padding: 10px 8px
+      text-transform: uppercase
+      margin: 55px auto
+    img
+      padding-bottom: 96px
+    p
+      position: relative
+      font-family: $main-font
+      font-size: 1.8rem
+      line-height: 1.9
+      max-width: 720px
+      text-align: left
+      padding-bottom: 1.9em
+      img
+        position: absolute
+        top: 3px
+        left: -153px
+
+    #firstletter::first-letter
+      font-size: 7.2rem
+      font-family: $extrabold-font
+      line-height: 0.85
+      color: #ff0000
+      float: left
+      padding-right: 15px
+      margin-bottom: -1rem
+
+
+main
+  padding-bottom: 50px
+  img
+    width: 100%
+  p:first-of-type
+    width: 1280px
+    font-size: 1.6rem
+    font-family: $main-font
+    color: #959595
+    margin-top: 22px
+    margin-left: 20px
+  .bold-title
+    width: 700px
+    margin: auto
+  h2
+    width: 340px
+    font-size: 4.8rem
+    font-family: $extrabold-font
+    font-weight: 800
+    color: red
+    margin-top: 10px
+    margin-bottom: 52px
+  p
+    font-size: 1.8rem
+    font-family: $main-font
+    color: #394B54
+    width: 700px
+    margin: auto
+    padding-bottom: 1.9em
+
+.grid-container
+  max-width: 860px
+  margin: 110px auto 0 auto
+  display: grid
+  grid-template-columns: 1fr min-content 1fr
+  grid-auto-rows: auto min-content
+  justify-content: center
+  align-items: center
+  img
+    align-self: center
+    justify-self: center
+  img:nth-of-type(3)
+    margin-top: -80px
+  .equal
+    width: 50px
+    justify-self: center
+    padding: 30px
+  h3
+    font-family: $extrabold-font
+    font-size: 2.4rem
+    color: #ababab
+    text-transform: uppercase
+    text-align: center
+    padding: 60px 0px
+    white-space: nowrap
+    letter-spacing: 1.5px
+
+$widths: 1 285px, 3 228px, 4 281px, 6 280.9px, 7 244.5px, 9 272.6px, 10 303.7px, 12 303.8px
+
+@each $number, $width in $widths
+  .grid-container img:nth-of-type(#{$number})
+    width: $width
+
+footer
+  img
+    width: 100%
+  p
+    width: 1280px
+    font-size: 1.6rem
+    font-family: $main-font
+    color: #959595
+    margin-top: 22px
+    margin-left: 20px
+    margin: 20px 0 73px 25px
+  
