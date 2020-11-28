@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,800;0,900;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+* {
+  margin: 0;
+  text-decoration: none;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+html, body {
+  max-height: 100%;
+  font-family: "Fugaz One", cursive;
+  text-shadow: 2px 2px 3px #111111;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  max-height: 100%;
+  background: linear-gradient(180deg, #252525 0%, #181818 70%, #0D0D0D 100%);
+  z-index: 2;
+}
+main .grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1rem 1fr;
+  grid-template-areas: "left-top . right-top" "left-bottom . right-bottom";
+  padding: 50px 15rem;
+  gap: 60px;
+  animation: circle 2s ease-in-out alternate infinite;
+}
+main .grid-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: #fff;
+  box-shadow: 10px solid black;
+  filter: grayscale(100);
+  z-index: 1;
+  border-radius: 20px;
+}
+main .grid-container a:nth-of-type(1) {
+  grid-area: left-top;
+  background: url("../img/html.jpg");
+  background-size: cover;
+  opacity: 0.6;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 3;
+}
+main .grid-container a:nth-of-type(1):hover {
+  z-index: 3;
+  transform: perspective(100rem) rotateY(10deg) scale(1.25) translate(40px, 30px);
+  filter: grayscale(0) contrast(1.2);
+  opacity: 1;
+  transition: all 0.7s ease;
+}
+main .grid-container a:nth-of-type(2) {
+  grid-area: right-top;
+  background: url("../img/css.jpg");
+  background-size: cover;
+  opacity: 0.6;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 3;
+}
+main .grid-container a:nth-of-type(2):hover {
+  z-index: 3;
+  transform: perspective(100rem) rotateY(-10deg) scale(1.25) translate(-40px, 30px);
+  filter: grayscale(0) contrast(1.2);
+  opacity: 1;
+  transition: all 0.7s ease;
+}
+main .grid-container a:nth-of-type(3) {
+  grid-area: left-bottom;
+  background: url("../img/sass.jpg");
+  background-size: cover;
+  opacity: 0.6;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 2;
+}
+main .grid-container a:nth-of-type(3):hover {
+  z-index: 3;
+  transform: perspective(100rem) rotateY(10deg) scale(1.25) translate(40px, -30px);
+  filter: grayscale(0) contrast(1.1);
+  opacity: 1;
+  transition: all 0.7s ease;
+}
+main .grid-container a:nth-of-type(4) {
+  grid-area: right-bottom;
+  background: url("../img/illustrator.jpg");
+  background-size: cover;
+  opacity: 0.6;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 2;
+}
+main .grid-container a:nth-of-type(4):hover {
+  z-index: 3;
+  transform: perspective(100rem) rotateY(-10deg) scale(1.25) translate(-40px, -30px);
+  filter: grayscale(0) contrast(1.2);
+  opacity: 1;
+  transition: all 0.7s ease;
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(0.96);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
