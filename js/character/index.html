@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6232e14b19.js" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <title>Create Your Character</title>
+</head>
+
+<body>
+  <main>
+    <!-- FORM FIELD  -->
+    <form>
+      <label for="name">Character Name:</label><br>
+      <input type="text" id="name" placeholder="Choose name"><br>
+      <!-- GENDER SELECTOR -->
+      <label for="gender">Gender:</label>
+      <select id="gender-select">
+        <option selected disabled hidden>-> Choose a gender <-</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <!-- RACE SELECTOR -->
+      <label for="race">Race:</label>
+      <select id="race-select">
+        <option selected disabled hidden>-> Choose a race <-</option>
+        <option value="human">Human</option>
+        <option value="elf">Elf</option>
+        <option value="dwarf">Dwarf</option>
+        <option value="orc">Orc</option>
+      </select>
+      <!-- CLASS SELECTOR -->
+      <label for="class">Class:</label>
+      <select id="class-select">
+        <option selected disabled hidden>-> Choose a class <-</option>
+        <option value="warrior">Warrior</option>
+        <option value="sorcerer">Sorcerer</option>
+        <option value="assassin">Assassin</option>
+        <option value="druid">Druid</option>
+      </select>
+    </form>
+    <!-- CHARACTER FIELD -->
+    <section>
+      <h2>CHARACTER SHEET</h2>
+      <p id="name-result">choose name</p>
+      <!-- GENDER CARD -->
+      <div class="cards">
+        <h2>Gender:</h2>
+        <i class="fas fa-venus-mars" id="gender-image"></i>
+        <p id="gender-result">Select Gender</p>
+      </div>
+      <!-- RACE CARD -->
+      <div class="cards">
+        <h2>Race:</h2>
+        <img src="img/race/race.png" alt="Race" id="race-image">
+        <p id="race-result">Select Race</p>
+      </div>
+      <!-- CLASS CARD -->
+      <div class="cards">
+        <h2>Class:</h2>
+        <img src="img/class/class.png" alt="Class" id="class-image">
+        <p id="class-result">Select Class</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

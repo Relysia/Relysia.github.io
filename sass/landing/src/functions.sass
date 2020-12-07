@@ -1,0 +1,18 @@
+// FUNCTIONS
+=grid-function($column, $row, $area)
+  display: grid
+  grid-template-columns: $column
+  grid-template-rows: $row
+  grid-template-areas: $area
+
+=flex-function($direction, $justify, $align)
+  display: flex
+  flex-direction: $direction
+  justify-content: $justify
+  align-items: $align
+
+// BLOCKS
+%flex-center
+  display: flex
+  justify-content: center
+  align-items: center
