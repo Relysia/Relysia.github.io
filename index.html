@@ -4,68 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="out/main.css">
   <title>CodeCool Projects</title>
+  <script src="https://kit.fontawesome.com/6232e14b19.js" crossorigin="anonymous"></script>
+  <script src="javascript/main.js" defer></script>
 </head>
 
 <body>
-  <main class="flex-container">
-    <!-- LEFT CONTAINER -->
-    <div class="left-container grow">
-      <div class="box">
-        <a href="https://scratch.mit.edu/projects/442800752/">
-          <p>Spaceship</p>
-        </a>
-      </div>
-      <div class="box">
-        <a href="tree/plantatree.html">
-          <p>Plant a Tree</p>
-        </a>
-      </div>
-      <div class="box">
-        <a href="recipe/index.html">
-          <p>Grandmas Recipes</p>
-        </a>
-      </div>
+  <video autoplay muted loop>
+    <source src="video/bg.mp4" type="video/mp4">
+  </video>
+  <main>
+    <div class="grid-container">
+      <a id="html">HTML</a>
+      <a id="css">CSS</a>
+      <a id="sass">SASS</a>
+      <a id="js">JAVASCRIPT</a>
     </div>
-    <!-- MIDDLE CONTAINER -->
-    <div class="middle-container grow">
-        <div class="box">
-          <a href="layouts/index.html">
-            <p>CSS Layouts</p>
-          </a>
-        </div>
-        <div class="box">
-          <a href="center/index.html">
-            <p>Super Center Title</p>
-          </a>
-        </div>
-        <div class="box">
-          <a href="catblog/home.html">
-            <p>Cats vs Humans</p>
-          </a>
-        </div>
-      </div>
-    <!-- RIGHT CONTAINER -->
-    <div class="right-container grow">
-        <div class="box">
-          <a href="rainbow/index.html">
-            <p>Responsive Rainbow</p>
-          </a>
-        </div>
-        <div class="box">
-          <a href="sas/index.html">
-            <p>SAS-Space</p>
-          </a>
-        </div>
-        <div class="box">
-          <a href="#">
-            <p>Landing for a Cause</p>
-          </a>
-        </div>
-      </div>
+    <i class="fas fa-home" id="left-icon" class="hide"></i>
+    <i class="fas fa-chevron-circle-right" id="right-icon" class="hide"></i>
   </main>
-  </div>
 </body>
 
 </html>

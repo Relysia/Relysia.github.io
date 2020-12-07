@@ -6,12 +6,20 @@
   font-size: 10px
   box-sizing: border-box
 
+@media (max-width: 1400px)
+  *
+    font-size: 8px
+
+@media (max-width: 1100px)
+  *
+    font-size: 6px
+
 html, body
   max-height: 100%
-  // font-family: 'Montserrat', sans-serif
   font-family: 'Fugaz One', cursive
   text-shadow: 2px 2px 3px #111111
 
+// BACKGROUND VIDEO
 video
   object-fit: cover
   width: 100vw
@@ -20,33 +28,43 @@ video
   top: 0
   left: 0
 
-
+// MAIN LANDING PAGE
 main
   max-height: 100%
-  background: linear-gradient(180deg, #252525 0%, #181818 70%, #0D0D0D 100%)
   z-index: 2
   .grid-container
     height: 100vh
     display: grid
     grid-template-columns: 1fr 1rem 1fr
     grid-template-areas: "left-top . right-top" "left-bottom . right-bottom"
-    padding: 50px 15rem
-    gap: 60px
-    animation: circle 2s ease-in-out alternate infinite
+    padding: 5rem 15rem
+    gap: 6rem
+    animation: heartbeat 2s ease-in-out alternate infinite
     a
+      opacity: 1
       display: flex
+      flex-direction: column
       justify-content: center
       align-items: center
       font-size: 5rem
       color: #fff
-      box-shadow: 10px solid black
       filter: grayscale(100)
       z-index: 1
       border-radius: 20px
+      position: relative
+      cursor: pointer
+      background-size: cover
+      background-position: center
+      animation: showup 1.1s linear
+      p
+        font-size: 2rem
+        position: absolute
+        margin-top: 80px
     a:nth-of-type(1)
       grid-area: left-top
       background: url('../img/html.jpg')
       background-size: cover
+      background-position: center
       opacity: .6
       transition: transform .5s ease-in-out, filter .5s ease-in-out, opacity .5s ease-in-out
       z-index: 3
@@ -60,6 +78,7 @@ main
       grid-area: right-top
       background: url('../img/css.jpg')
       background-size: cover
+      background-position: center
       opacity: .6
       transition: transform .5s ease-in-out, filter .5s ease-in-out, opacity .5s ease-in-out
       z-index: 3
@@ -73,6 +92,7 @@ main
       grid-area: left-bottom
       background: url('../img/sass.jpg')
       background-size: cover
+      background-position: center
       opacity: .6
       transition: transform .5s ease-in-out, filter .5s ease-in-out, opacity .5s ease-in-out
       z-index: 2
@@ -86,6 +106,7 @@ main
       grid-area: right-bottom
       background: url('../img/illustrator.jpg')
       background-size: cover
+      background-position: center
       opacity: .6
       transition: transform .5s ease-in-out, filter .5s ease-in-out, opacity .5s ease-in-out
       z-index: 2
@@ -94,10 +115,91 @@ main
         transform: perspective(100rem) rotateY(-10deg) scale(1.25) translate(-40px, -30px)
         filter: grayscale(0) contrast(1.2)
         opacity: 1
-        transition: all .7s ease
+        transition: all .7s 
 
-@keyframes circle
-  0% 
+main
+  #left-icon
+    position: absolute
+    left: 20px
+    top: 50%
+    transform: translateY(-50%)
+    font-size: 4.5rem
+    color: #ffffff
+    cursor: pointer
+    transition: .3s ease-in-out
+    &:hover
+      transform: translateY(-50%) translateX(5px) scale(1.3)
+      color: #ffca67
+  #right-icon
+    position: absolute
+    right: 20px
+    top: 50%
+    transform: translateY(-50%)
+    font-size: 4.5rem
+    color: #ffffff
+    cursor: pointer
+    transition: .3s ease-in-out
+    &:hover
+      color: #ffca67
+  .hide
+    display: none
+
+@keyframes heartbeat
+  0%
     transform: scale(.96)
-  100% 
+  100%
     transform: scale(1)
+
+main
+  .grid-container
+    .hide-content
+      display: none
+    #plant-a-tree
+      background-image: url('../img/html/plantatree.jpg')
+      animation: showup 1.1s linear
+    #grandmas-recipes
+      background-image: url('../img/html/grandma.jpg')
+      animation: showup 1.1s linear
+    #css-layouts
+      background-image: url('../img/css/layouts.jpg')
+      animation: showup 1.1s linear
+    #center-title
+      background-image: url('../img/css/center.jpg')
+      animation: showup 1.1s linear
+    #blog-page
+      background-image: url('../img/css/blog.jpg')
+      animation: showup 1.1s linear
+    #rainbow
+      background-image: url('../img/css/rainbow.jpg')
+      animation: showup 1.1s linear
+    #sas-space
+      background-image: url('../img/sass/sas.jpg')
+      animation: showup 1.1s linear
+    #landing
+      background-image: url('../img/sass/landing.jpg')
+      animation: showup 1.1s linear
+    #travel-agency
+      background-image: url('../img/sass/travel.jpg')
+      animation: showup 1.1s linear
+    #buttons
+      background-image: url('../img/js/buttons.jpg')
+      animation: showup 1.1s linear
+    #character
+      background-image: url('../img/js/create.jpg')
+      animation: showup 1.1s linear
+    #booking
+      background-image: url('../img/js/table.jpg')
+      animation: showup 1.1s linear
+    
+
+@keyframes showup
+  0%
+    opacity: 0
+  100%
+    opacity: .6
+
+@keyframes fadeout
+  0%
+    opacity: .6
+  100%
+    opacity: 0

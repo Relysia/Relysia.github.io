@@ -7,6 +7,16 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 1400px) {
+  * {
+    font-size: 8px;
+  }
+}
+@media (max-width: 1100px) {
+  * {
+    font-size: 6px;
+  }
+}
 html, body {
   max-height: 100%;
   font-family: "Fugaz One", cursive;
@@ -24,7 +34,6 @@ video {
 
 main {
   max-height: 100%;
-  background: linear-gradient(180deg, #252525 0%, #181818 70%, #0D0D0D 100%);
   z-index: 2;
 }
 main .grid-container {
@@ -32,25 +41,37 @@ main .grid-container {
   display: grid;
   grid-template-columns: 1fr 1rem 1fr;
   grid-template-areas: "left-top . right-top" "left-bottom . right-bottom";
-  padding: 50px 15rem;
-  gap: 60px;
-  animation: circle 2s ease-in-out alternate infinite;
+  padding: 5rem 15rem;
+  gap: 6rem;
+  animation: heartbeat 2s ease-in-out alternate infinite;
 }
 main .grid-container a {
+  opacity: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 5rem;
   color: #fff;
-  box-shadow: 10px solid black;
   filter: grayscale(100);
   z-index: 1;
   border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  animation: showup 1.1s linear;
+}
+main .grid-container a p {
+  font-size: 2rem;
+  position: absolute;
+  margin-top: 80px;
 }
 main .grid-container a:nth-of-type(1) {
   grid-area: left-top;
   background: url("../img/html.jpg");
   background-size: cover;
+  background-position: center;
   opacity: 0.6;
   transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
   z-index: 3;
@@ -66,6 +87,7 @@ main .grid-container a:nth-of-type(2) {
   grid-area: right-top;
   background: url("../img/css.jpg");
   background-size: cover;
+  background-position: center;
   opacity: 0.6;
   transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
   z-index: 3;
@@ -81,6 +103,7 @@ main .grid-container a:nth-of-type(3) {
   grid-area: left-bottom;
   background: url("../img/sass.jpg");
   background-size: cover;
+  background-position: center;
   opacity: 0.6;
   transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
   z-index: 2;
@@ -96,6 +119,7 @@ main .grid-container a:nth-of-type(4) {
   grid-area: right-bottom;
   background: url("../img/illustrator.jpg");
   background-size: cover;
+  background-position: center;
   opacity: 0.6;
   transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
   z-index: 2;
@@ -105,15 +129,114 @@ main .grid-container a:nth-of-type(4):hover {
   transform: perspective(100rem) rotateY(-10deg) scale(1.25) translate(-40px, -30px);
   filter: grayscale(0) contrast(1.2);
   opacity: 1;
-  transition: all 0.7s ease;
+  transition: all 0.7s;
 }
 
-@keyframes circle {
+main #left-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+main #left-icon:hover {
+  transform: translateY(-50%) translateX(5px) scale(1.3);
+  color: #ffca67;
+}
+main #right-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+main #right-icon:hover {
+  color: #ffca67;
+}
+main .hide {
+  display: none;
+}
+
+@keyframes heartbeat {
   0% {
     transform: scale(0.96);
   }
   100% {
     transform: scale(1);
+  }
+}
+main .grid-container .hide-content {
+  display: none;
+}
+main .grid-container #plant-a-tree {
+  background-image: url("../img/html/plantatree.jpg");
+  animation: showup 1.1s linear;
+}
+main .grid-container #grandmas-recipes {
+  background-image: url("../img/html/grandma.jpg");
+  animation: showup 1.1s linear;
+}
+main .grid-container #css-layouts {
+  background-image: url("../img/css/layouts.jpg");
+  animation: showup 1.1s linear;
+}
+main .grid-container #center-title {
+  background-image: url("../img/css/center.jpg");
+  animation: showup 1.1s linear;
+}
+main .grid-container #blog-page {
+  background-image: url("../img/css/blog.jpg");
+  animation: showup 1.1s linear;
+}
+main .grid-container #rainbow {
+  background-image: url("../img/css/rainbow.jpg");
+  animation: showup 1.1s linear;
+}
+main .grid-container #sas-space {
+  background-image: url("../img/sass/sas.jpg");
+  animation: showup 1.1s linear;
+}
+main .grid-container #landing {
+  background-image: url("../img/sass/landing.jpg");
+  animation: showup 1.1s linear;
+}
+main .grid-container #travel-agency {
+  background-image: url("../img/sass/travel.jpg");
+  animation: showup 1.1s linear;
+}
+main .grid-container #buttons {
+  background-image: url("../img/js/buttons.jpg");
+  animation: showup 1.1s linear;
+}
+main .grid-container #character {
+  background-image: url("../img/js/create.jpg");
+  animation: showup 1.1s linear;
+}
+main .grid-container #booking {
+  background-image: url("../img/js/table.jpg");
+  animation: showup 1.1s linear;
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
