@@ -1,133 +1,124 @@
+// ELEMENT VARIABLES
+// GRID CONTENT
 let htmlLink = document.querySelector('#html')
 let cssLink = document.querySelector('#css')
 let sassLink = document.querySelector('#sass')
 let jsLink = document.querySelector('#js')
 
+// LEFT AND RIGHT ARROW
 let leftArrow = document.querySelector('#left-icon')
 let rightArrow = document.querySelector('#right-icon')
 leftArrow.classList.add('hide')
-rightArrow.classList.add('hide')
 
-//DEFAULT LAYOUT
-function defaultLayout() {
-  htmlLink.textContent = 'HTML'
+// BASIC FUNCTIONS
+// CHANGE AN ELEMENT CONTENT
+function changeContent(element, title, link, idName) {
+  element.textContent = title
   setTimeout(function () {
-    htmlLink.setAttribute('href', '#')
+    element.setAttribute('href', link)
   }, 100)
-  htmlLink.setAttribute('id', 'html')
-  cssLink.textContent = 'CSS'
-  setTimeout(function () {
-    cssLink.setAttribute('href', '#')
-  }, 100)
-  cssLink.setAttribute('id', 'css')
-  sassLink.textContent = 'SASS'
-  setTimeout(function () {
-    sassLink.setAttribute('href', '#')
-  }, 100)
-  sassLink.setAttribute('id', 'sass')
-  jsLink.textContent = 'JAVASCRIPT'
-  setTimeout(function () {
-    jsLink.setAttribute('href', '#')
-  }, 100)
-  jsLink.setAttribute('id', 'js')
-  htmlLink.classList.remove('hide-content')
-  cssLink.classList.remove('hide-content')
-  sassLink.classList.remove('hide-content')
-  jsLink.classList.remove('hide-content')
-  leftArrow.classList.add('hide')
-  rightArrow.classList.add('hide')
+  element.setAttribute('id', idName)
+}
+// HIDE ONE ELEMENT
+function hideElement(element, className) {
+  element.classList.add(className)
+}
+// SHOW ALL ELEMENT
+
+// REMOVE HIDE FROM ONE ELEMENT
+function removeHide(element, className) {
+  element.classList.remove(className)
+}
+// REMOVE HIDE FROM EVERY ELEMENT
+function removeAll(element1, element2, element3, element4, className) {
+  removeHide(element1, className)
+  removeHide(element2, className)
+  removeHide(element3, className)
+  removeHide(element4, className)
 }
 
-leftArrow.addEventListener('click', defaultLayout)
+//FIRST PAGE LAYOUT
+function firstPage() {
+  changeContent(htmlLink, 'HTML', '#', 'html')
+  changeContent(cssLink, 'CSS', '#', 'css')
+  changeContent(sassLink, 'SASS', '#', 'sass')
+  changeContent(jsLink, 'JAVASCRIPT', '#', 'js')
+  changeContent(illustratorLink, 'ILLUSTRATOR', '#', 'illustrator')
+  removeAll(htmlLink, cssLink, sassLink, jsLink, 'hide-content')
+  hideElement(illustratorLink, 'hide-content')
+  leftArrow.className = "fas fa-home"
+  hideElement(leftArrow, 'hide')
+  removeHide(rightArrow, 'hide')
+}
+leftArrow.addEventListener('click', firstPage)
 
 // HTML SWITCH LAYOUT
 function htmlSwitch() {
-  htmlLink.textContent = 'Plant a Tree'
-  setTimeout(function () {
-    htmlLink.setAttribute('href', 'html/tree/plantatree.html')
-  }, 100);
-  htmlLink.setAttribute('id', 'plant-a-tree')
-  cssLink.textContent = 'Grandmas Recipes'
-  setTimeout(function () {
-    cssLink.setAttribute('href', 'html/recipe/index.html')
-  }, 100)
-  cssLink.setAttribute('id', 'grandmas-recipes')
-  sassLink.classList.add('hide-content')
-  jsLink.classList.add('hide-content')
-  leftArrow.classList.remove('hide')
+  changeContent(htmlLink, 'Plant a Tree', 'html/tree/plantatree.html', 'plant-a-tree')
+  changeContent(cssLink, 'Grandmas Recipes', 'html/recipe/index.html', 'grandmas-recipes')
+  hideElement(sassLink, 'hide-content')
+  hideElement(jsLink, 'hide-content')
+  removeHide(leftArrow, 'hide')
+  hideElement(rightArrow, 'hide')
 }
-
 htmlLink.addEventListener('click', htmlSwitch)
 
 // CSS SWITCH LAYOUT
 function cssSwitch() {
-  htmlLink.textContent = 'CSS Layouts'
-  setTimeout(function () {
-    htmlLink.setAttribute('href', 'css/layouts/index.html')
-  }, 100)
-  htmlLink.setAttribute('id', 'css-layouts')
-  cssLink.textContent = 'Super Center Title'
-  setTimeout(function () {
-    cssLink.setAttribute('href', 'css/center/index.html')
-  }, 100)
-  cssLink.setAttribute('id', 'center-title')
-  sassLink.textContent = 'Blog Page'
-  setTimeout(function () {
-    sassLink.setAttribute('href', 'css/catblog/home.html')
-  }, 100)
-  sassLink.setAttribute('id', 'blog-page')
-  jsLink.textContent = 'Responsive Rainbow'
-  setTimeout(function () {
-    jsLink.setAttribute('href', 'css/rainbow/index.html')
-  }, 100)
-  jsLink.setAttribute('id', 'rainbow')
-  leftArrow.classList.remove('hide')
+  changeContent(htmlLink, 'CSS Layouts', 'css/layouts/index.html', 'css-layouts')
+  changeContent(cssLink, 'Super Center Title', 'css/center/index.html', 'center-title')
+  changeContent(sassLink, 'Blog Page', 'css/catblog/home.html', 'blog-page')
+  changeContent(jsLink, 'Responsive Rainbow', 'css/rainbow/index.html', 'rainbow')
+  removeHide(leftArrow, 'hide')
+  hideElement(rightArrow, 'hide')
 }
-
 cssLink.addEventListener('click', cssSwitch)
 
 // SASS SWITCH
 function sassSwitch() {
-  htmlLink.textContent = 'SAS Space'
-  setTimeout(function () {
-    htmlLink.setAttribute('href', 'sass/sas/index.html')
-  }, 100)
-  htmlLink.setAttribute('id', 'sas-space')
-  cssLink.textContent = 'Landing for a Cause'
-  setTimeout(function () {
-    cssLink.setAttribute('href', 'sass/landing/index.html')
-  }, 100)
-  cssLink.setAttribute('id', 'landing')
-  sassLink.textContent = 'Travel Agency'
-  setTimeout(function () {
-    sassLink.setAttribute('href', 'sass/travel/index.html')
-  }, 100)
-  sassLink.setAttribute('id', 'travel-agency')
-  jsLink.classList.add('hide-content')
-  leftArrow.classList.remove('hide')
+  changeContent(htmlLink, 'SAS Space', 'sass/sas/index.html', 'sas-space')
+  changeContent(cssLink, 'Landing for a Cause', 'sass/landing/index.html', 'landing')
+  changeContent(sassLink, 'Travel Agency', 'sass/travel/index.html', 'travel-agency')
+  hideElement(jsLink, 'hide-content')
+  removeHide(leftArrow, 'hide')
+  hideElement(rightArrow, 'hide')
 }
-
 sassLink.addEventListener('click', sassSwitch)
 
 // JAVASCRIPT SWITCH
 function jsSwitch() {
-  htmlLink.textContent = 'Multi Color Buttons'
-  setTimeout(function () {
-    htmlLink.setAttribute('href', 'js/buttons/index.html')
-  }, 100)
-  htmlLink.setAttribute('id', 'buttons')
-  cssLink.textContent = 'Create Your Character'
-  setTimeout(function () {
-    cssLink.setAttribute('href', 'js/character/index.html')
-  }, 100)
-  cssLink.setAttribute('id', 'character')
-  sassLink.textContent = 'Book a Table'
-  setTimeout(function () {
-    sassLink.setAttribute('href', 'js/booking/index.html')
-  }, 100)
-  sassLink.setAttribute('id', 'booking')
-  jsLink.classList.add('hide-content')
-  leftArrow.classList.remove('hide')
+  changeContent(htmlLink, 'Multi Color Buttons', 'js/buttons/index.html', 'buttons')
+  changeContent(cssLink, 'Create Your Character', 'js/character/index.html', 'character')
+  changeContent(sassLink, 'Book a Table', 'js/booking/index.html', 'booking')
+  hideElement(jsLink, 'hide-content')
+  removeHide(leftArrow, 'hide')
+  hideElement(rightArrow, 'hide')
+}
+jsLink.addEventListener('click', jsSwitch)
+
+// SECOND PAGE LAYOUT
+let illustratorLink = document.querySelector('#illustrator')
+
+function secondPage() {
+  hideElement(htmlLink, 'hide-content')
+  hideElement(cssLink, 'hide-content')
+  hideElement(sassLink, 'hide-content')
+  hideElement(jsLink, 'hide-content')
+  leftArrow.className = "fas fa-chevron-circle-left"
+  hideElement(rightArrow, 'hide')
+  removeHide(illustratorLink, 'hide-content')
+}
+rightArrow.addEventListener('click', secondPage)
+
+// ILLUSTRATOR SWITCH
+function illustratorSwitch() {
+  removeAll(htmlLink, cssLink, sassLink, jsLink, 'hide-content')
+  hideElement(htmlLink, 'hide-content')
+  changeContent(illustratorLink, 'Fancy Fonts', 'illustrator/fancy/index.html', 'fancy')
+  changeContent(cssLink, 'Simple Shape', 'illustrator/shape/index.html', 'shape')
+  changeContent(sassLink, 'Interactive Logo', 'illustrator/logo/logo.html', 'logo')
+  hideElement(jsLink, 'hide-content')
+  leftArrow.className = "fas fa-home"
 }
 
-jsLink.addEventListener('click', jsSwitch)
+illustratorLink.addEventListener('click', illustratorSwitch)

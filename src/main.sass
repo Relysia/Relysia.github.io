@@ -115,12 +115,27 @@ main
         transform: perspective(100rem) rotateY(-10deg) scale(1.25) translate(-40px, -30px)
         filter: grayscale(0) contrast(1.1)
         opacity: 1
-        transition: all .7s 
+        transition: all .7s
+    a:nth-of-type(5)
+      grid-area: left-top
+      background: url('../img/main/illustrator.jpg')
+      background-size: cover
+      background-position: center
+      opacity: .6
+      transition: transform .5s ease-in-out, filter .5s ease-in-out, opacity .5s ease-in-out
+      z-index: 3
+      &:hover
+        z-index: 3
+        transform: perspective(100rem) rotateY(10deg) scale(1.25) translate(40px, 30px)
+        filter: grayscale(0) contrast(1.1)
+        opacity: 1
+        transition: all .7s ease
 
+// LEFT AND RIGHT ICONS
 main
   #left-icon
     position: absolute
-    left: 20px
+    left: 30px
     top: 50%
     transform: translateY(-50%)
     font-size: 4.5rem
@@ -132,7 +147,7 @@ main
       color: #ffca67
   #right-icon
     position: absolute
-    right: 20px
+    right: 30px
     top: 50%
     transform: translateY(-50%)
     font-size: 4.5rem
@@ -140,6 +155,7 @@ main
     cursor: pointer
     transition: .3s ease-in-out
     &:hover
+      transform: translateY(-50%) translateX(-5px) scale(1.3)
       color: #ffca67
   .hide
     display: none
@@ -150,46 +166,41 @@ main
   100%
     transform: scale(1)
 
+// CHANGE IMAGE BASED ON LAYOUT
 main
   .grid-container
     .hide-content
       display: none
     #plant-a-tree
       background-image: url('../img/html/plantatree.jpg')
-      animation: showup 1.1s linear
     #grandmas-recipes
       background-image: url('../img/html/grandma.jpg')
-      animation: showup 1.1s linear
     #css-layouts
       background-image: url('../img/css/layouts.jpg')
-      animation: showup 1.1s linear
     #center-title
       background-image: url('../img/css/center.jpg')
-      animation: showup 1.1s linear
     #blog-page
       background-image: url('../img/css/blog.jpg')
-      animation: showup 1.1s linear
     #rainbow
       background-image: url('../img/css/rainbow.jpg')
-      animation: showup 1.1s linear
     #sas-space
       background-image: url('../img/sass/sas.jpg')
-      animation: showup 1.1s linear
     #landing
       background-image: url('../img/sass/landing.jpg')
-      animation: showup 1.1s linear
     #travel-agency
       background-image: url('../img/sass/travel.jpg')
-      animation: showup 1.1s linear
     #buttons
       background-image: url('../img/js/buttons.jpg')
-      animation: showup 1.1s linear
     #character
       background-image: url('../img/js/create.jpg')
-      animation: showup 1.1s linear
     #booking
       background-image: url('../img/js/table.jpg')
-      animation: showup 1.1s linear
+    #fancy
+      background-image: url('../img/illustrator/fancy.jpg')
+    #shape
+      background-image: url('../img/illustrator/simba.jpg')
+    #logo
+      background-image: url('../img/illustrator/beer.jpg')
     
 
 @keyframes showup

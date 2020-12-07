@@ -131,10 +131,26 @@ main .grid-container a:nth-of-type(4):hover {
   opacity: 1;
   transition: all 0.7s;
 }
+main .grid-container a:nth-of-type(5) {
+  grid-area: left-top;
+  background: url("../img/main/illustrator.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 3;
+}
+main .grid-container a:nth-of-type(5):hover {
+  z-index: 3;
+  transform: perspective(100rem) rotateY(10deg) scale(1.25) translate(40px, 30px);
+  filter: grayscale(0) contrast(1.1);
+  opacity: 1;
+  transition: all 0.7s ease;
+}
 
 main #left-icon {
   position: absolute;
-  left: 20px;
+  left: 30px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 4.5rem;
@@ -148,7 +164,7 @@ main #left-icon:hover {
 }
 main #right-icon {
   position: absolute;
-  right: 20px;
+  right: 30px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 4.5rem;
@@ -157,6 +173,7 @@ main #right-icon {
   transition: 0.3s ease-in-out;
 }
 main #right-icon:hover {
+  transform: translateY(-50%) translateX(-5px) scale(1.3);
   color: #ffca67;
 }
 main .hide {
@@ -176,51 +193,48 @@ main .grid-container .hide-content {
 }
 main .grid-container #plant-a-tree {
   background-image: url("../img/html/plantatree.jpg");
-  animation: showup 1.1s linear;
 }
 main .grid-container #grandmas-recipes {
   background-image: url("../img/html/grandma.jpg");
-  animation: showup 1.1s linear;
 }
 main .grid-container #css-layouts {
   background-image: url("../img/css/layouts.jpg");
-  animation: showup 1.1s linear;
 }
 main .grid-container #center-title {
   background-image: url("../img/css/center.jpg");
-  animation: showup 1.1s linear;
 }
 main .grid-container #blog-page {
   background-image: url("../img/css/blog.jpg");
-  animation: showup 1.1s linear;
 }
 main .grid-container #rainbow {
   background-image: url("../img/css/rainbow.jpg");
-  animation: showup 1.1s linear;
 }
 main .grid-container #sas-space {
   background-image: url("../img/sass/sas.jpg");
-  animation: showup 1.1s linear;
 }
 main .grid-container #landing {
   background-image: url("../img/sass/landing.jpg");
-  animation: showup 1.1s linear;
 }
 main .grid-container #travel-agency {
   background-image: url("../img/sass/travel.jpg");
-  animation: showup 1.1s linear;
 }
 main .grid-container #buttons {
   background-image: url("../img/js/buttons.jpg");
-  animation: showup 1.1s linear;
 }
 main .grid-container #character {
   background-image: url("../img/js/create.jpg");
-  animation: showup 1.1s linear;
 }
 main .grid-container #booking {
   background-image: url("../img/js/table.jpg");
-  animation: showup 1.1s linear;
+}
+main .grid-container #fancy {
+  background-image: url("../img/illustrator/fancy.jpg");
+}
+main .grid-container #shape {
+  background-image: url("../img/illustrator/simba.jpg");
+}
+main .grid-container #logo {
+  background-image: url("../img/illustrator/beer.jpg");
 }
 
 @keyframes showup {
