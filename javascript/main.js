@@ -57,7 +57,7 @@ function htmlSwitch() {
   changeContent(
     topLeft,
     "Plant a Tree",
-    "react/findmylist/index.html",
+    "react/search/index.html",
     "plant-a-tree"
   );
   changeContent(
